@@ -3,34 +3,34 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Title | fastpages</title>
+<title>Chapter 10 | fastpages</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Chapter 10" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="summary" />
-<meta property="og:description" content="summary" />
+<meta name="description" content="NLP" />
+<meta property="og:description" content="NLP" />
 <link rel="canonical" href="https://maxlein.github.io/fastbook/2020/03/19/_nlp.html" />
 <meta property="og:url" content="https://maxlein.github.io/fastbook/2020/03/19/_nlp.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-03-19T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2020-03-19T00:00:00-05:00","headline":"Title","description":"summary","mainEntityOfPage":{"@type":"WebPage","@id":"https://maxlein.github.io/fastbook/2020/03/19/_nlp.html"},"@type":"BlogPosting","url":"https://maxlein.github.io/fastbook/2020/03/19/_nlp.html","dateModified":"2020-03-19T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"datePublished":"2020-03-19T00:00:00-05:00","headline":"Chapter 10","description":"NLP","mainEntityOfPage":{"@type":"WebPage","@id":"https://maxlein.github.io/fastbook/2020/03/19/_nlp.html"},"@type":"BlogPosting","url":"https://maxlein.github.io/fastbook/2020/03/19/_nlp.html","dateModified":"2020-03-19T00:00:00-05:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastbook/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://maxlein.github.io/fastbook/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/fastbook/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Title | fastpages</title>
+<title>Chapter 10 | fastpages</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Chapter 10" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="summary" />
-<meta property="og:description" content="summary" />
+<meta name="description" content="NLP" />
+<meta property="og:description" content="NLP" />
 <link rel="canonical" href="https://maxlein.github.io/fastbook/2020/03/19/_nlp.html" />
 <meta property="og:url" content="https://maxlein.github.io/fastbook/2020/03/19/_nlp.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-03-19T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2020-03-19T00:00:00-05:00","headline":"Title","description":"summary","mainEntityOfPage":{"@type":"WebPage","@id":"https://maxlein.github.io/fastbook/2020/03/19/_nlp.html"},"@type":"BlogPosting","url":"https://maxlein.github.io/fastbook/2020/03/19/_nlp.html","dateModified":"2020-03-19T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"datePublished":"2020-03-19T00:00:00-05:00","headline":"Chapter 10","description":"NLP","mainEntityOfPage":{"@type":"WebPage","@id":"https://maxlein.github.io/fastbook/2020/03/19/_nlp.html"},"@type":"BlogPosting","url":"https://maxlein.github.io/fastbook/2020/03/19/_nlp.html","dateModified":"2020-03-19T00:00:00-05:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -88,7 +88,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="page-description">summary</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-03-19T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Chapter 10</h1><p class="page-description">NLP</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-03-19T00:00:00-05:00" itemprop="datePublished">
         Mar 19, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -117,7 +117,37 @@ window.onload = wrap_img;
       </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <!--
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#NLP-deep-dive:-RNNs">NLP deep dive: RNNs </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Text-preprocessing">Text preprocessing </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Tokenization">Tokenization </a></li>
+<li class="toc-entry toc-h3"><a href="#Word-tokenization-with-fastai">Word tokenization with fastai </a></li>
+<li class="toc-entry toc-h3"><a href="#Subword-tokenization">Subword tokenization </a></li>
+<li class="toc-entry toc-h3"><a href="#Numericalization-with-fastai">Numericalization with fastai </a></li>
+<li class="toc-entry toc-h3"><a href="#Putting-our-texts-into-batches-for-a-language-model">Putting our texts into batches for a language model </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Training-a-text-classifier">Training a text classifier </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Language-model-using-DataBlock">Language model using DataBlock </a></li>
+<li class="toc-entry toc-h3"><a href="#Fine-tuning-the-language-model">Fine tuning the language model </a></li>
+<li class="toc-entry toc-h3"><a href="#Saving-and-loading-models">Saving and loading models </a></li>
+<li class="toc-entry toc-h3"><a href="#Text-generation">Text generation </a></li>
+<li class="toc-entry toc-h3"><a href="#Creating-the-classifier-DataLoaders">Creating the classifier DataLoaders </a></li>
+<li class="toc-entry toc-h3"><a href="#Fine-tuning-the-classifier">Fine tuning the classifier </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Disinformation-and-language-models">Disinformation and language models </a></li>
+<li class="toc-entry toc-h2"><a href="#Questionnaire">Questionnaire </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Further-research">Further research </a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -133,9 +163,12 @@ window.onload = wrap_img;
 </div>
     
 [[chapter_nlp]]
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="NLP-deep-dive:-RNNs">NLP deep dive: RNNs<a class="anchor-link" href="#NLP-deep-dive:-RNNs"> </a></h1>
+<h1 id="NLP-deep-dive:-RNNs">
+<a class="anchor" href="#NLP-deep-dive:-RNNs" aria-hidden="true"><span class="octicon octicon-link"></span></a>NLP deep dive: RNNs<a class="anchor-link" href="#NLP-deep-dive:-RNNs"> </a>
+</h1>
 </div>
 </div>
 </div>
@@ -147,9 +180,11 @@ window.onload = wrap_img;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>jargon: Self-supervised learning: Training a model using labels that are embedded in the independent variable, rather than requiring external labels. For instance, training a model to predict the next word in a text.</p>
+<blockquote>
+<p>jargon: Self-supervised learning: Training a model using labels that are embedded in the independent variable, rather than requiring external labels. For instance, training a model to predict the next word in a text.</p>
 </blockquote>
 
 </div>
@@ -166,11 +201,12 @@ window.onload = wrap_img;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00027.png" alt="Diagram of the ULMFiT process" style="max-width: 700px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00027.png" alt="Diagram of the ULMFiT process" style="max-width: 700px">
     
     
       <figcaption>The ULMFiT process</figcaption>
@@ -181,20 +217,25 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now have a think about how you would turn this language modelling problem into a neural network, given what you have learned so far. We'll be able to use concepts that we've seen in the last two chapters.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Text-preprocessing">Text preprocessing<a class="anchor-link" href="#Text-preprocessing"> </a></h2>
+<h2 id="Text-preprocessing">
+<a class="anchor" href="#Text-preprocessing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Text preprocessing<a class="anchor-link" href="#Text-preprocessing"> </a>
+</h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It's not at all obvious how we're going to use what we've learned so far to build a language model. Sentences can be different lengths, and documents can be very long. So, how can we predict the next word of a sentence using a neural network? Let's find out!</p>
 <p>We've already seen how categorical variables can be used as independent variables for a neural network. The approach we took for a single categorical variable was to:</p>
@@ -214,47 +255,63 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Each of the steps necessary to create a language model has jargon associated with it from the world of natural language processing, and fastai and PyTorch classes available to help. The steps are:</p>
 <ul>
-<li><strong>Tokenization</strong>:: convert the text into a list of words (or characters, or substrings, depending on the granularity of your model)</li>
-<li><strong>Numericalization</strong>:: make a list of all of the unique words which appear (the vocab), and convert each word into a number, by looking up its index in the vocab</li>
-<li><strong>Language model data loader</strong> creation:: fastai provides an <code>LMDataLoader</code> class which automatically handles creating a dependent variable which is offset from the independent variable buy one token. It also handles some important details, such as how to shuffle the training data in such a way that the dependent and independent variables maintain their structure as required</li>
-<li><strong>Language model</strong> creation:: we need a special kind of model which does something we haven't seen before: handles input lists which could be arbitrarily big or small. There are a number of ways to do this; in this chapter we will be using a <em>recurrent neural network</em>. We will get to the details of this in the &lt;<chapter_nlp_dive>&gt;, but for now, you can think of it as just another deep neural network.&lt;/li&gt;
+<li>
+<strong>Tokenization</strong>:: convert the text into a list of words (or characters, or substrings, depending on the granularity of your model)</li>
+<li>
+<strong>Numericalization</strong>:: make a list of all of the unique words which appear (the vocab), and convert each word into a number, by looking up its index in the vocab</li>
+<li>
+<strong>Language model data loader</strong> creation:: fastai provides an <code>LMDataLoader</code> class which automatically handles creating a dependent variable which is offset from the independent variable buy one token. It also handles some important details, such as how to shuffle the training data in such a way that the dependent and independent variables maintain their structure as required</li>
+<li>
+<strong>Language model</strong> creation:: we need a special kind of model which does something we haven't seen before: handles input lists which could be arbitrarily big or small. There are a number of ways to do this; in this chapter we will be using a <em>recurrent neural network</em>. We will get to the details of this in the &lt;<chapter_nlp_dive>&gt;, but for now, you can think of it as just another deep neural network.&lt;/li&gt;
 &lt;/ul&gt;
 <p>Let's take a look at how each step works in detail.</p>
 
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Tokenization">Tokenization<a class="anchor-link" href="#Tokenization"> </a></h3>
+<h3 id="Tokenization">
+<a class="anchor" href="#Tokenization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tokenization<a class="anchor-link" href="#Tokenization"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>When we said, <em>convert the text into a list of words</em>, we left out a lot of details. For instance, what do we do with punctuation? How do we deal with a word like "don't"? Is it one word, or two? What about long medical or chemical words? Should they be split into their separate pieces of meaning? How about hyphenated words? What about languages like German and Poland where we can create really long words from many, many pieces? What about languages like Japanese and Chinese which don't use bases at all, and don't really have a well-defined idea of <em>word</em>?</p>
 <p>Because there is no one correct answer to these questions, there is no one approach to tokenization. Each element of the list created by the tokenisation process is called a <em>token</em>. There are three main approaches:</p>
 <ul>
-<li><strong>Word-based</strong>:: split a sentence on spaces, as well as applying language specific rules to try to separate parts of meaning, even when there are no spaces, such as turning "don't" into "do n't". Generally, punctuation marks are also split into separate tokens</li>
-<li><strong>Subword based</strong>:: split words into smaller parts, based on the most commonly occurring substrings. For instance, "occasion" might be tokeniser as "o c ca sion"</li>
-<li><strong>Character-based</strong>:: split a sentence into its individual characters.</li>
+<li>
+<strong>Word-based</strong>:: split a sentence on spaces, as well as applying language specific rules to try to separate parts of meaning, even when there are no spaces, such as turning "don't" into "do n't". Generally, punctuation marks are also split into separate tokens</li>
+<li>
+<strong>Subword based</strong>:: split words into smaller parts, based on the most commonly occurring substrings. For instance, "occasion" might be tokeniser as "o c ca sion"</li>
+<li>
+<strong>Character-based</strong>:: split a sentence into its individual characters.</li>
 </ul>
 <p>We'll be looking at word and subword tokenization here, and we'll leave character-based tokenization for you to implement in the questionnaire at the end of this chapter.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>jargon: token: one element of a list created by the tokenisation process. It could be a word, part of a word (a <em>subword</em>), or a single character.</p>
+<blockquote>
+<p>jargon: token: one element of a list created by the tokenisation process. It could be a word, part of a word (a <em>subword</em>), or a single character.</p>
 </blockquote>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Word-tokenization-with-fastai">Word tokenization with fastai<a class="anchor-link" href="#Word-tokenization-with-fastai"> </a></h3>
+<h3 id="Word-tokenization-with-fastai">
+<a class="anchor" href="#Word-tokenization-with-fastai" aria-hidden="true"><span class="octicon octicon-link"></span></a>Word tokenization with fastai<a class="anchor-link" href="#Word-tokenization-with-fastai"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -284,7 +341,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We'll need to grab the text files in order to try out a tokenizer. Just like <code>get_image_files</code>, which we've used many times already, gets all the image files in a path, <code>get_text_files</code> gets all the text files in a path. We can also optionally pass <code>folders</code> to restrict the search to a particular list of subfolders:</p>
 
@@ -298,7 +356,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="n">get_text_files</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">folders</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;unsup&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="n">get_text_files</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">folders</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'train'</span><span class="p">,</span> <span class="s1">'test'</span><span class="p">,</span> <span class="s1">'unsup'</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -308,7 +366,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here's a review that we'll tokenize (we'll just print the start of it here to save space):</p>
 
@@ -337,7 +396,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;This movie, which I just discovered at the video store, has apparently sit &#39;</pre>
+<pre>'This movie, which I just discovered at the video store, has apparently sit '</pre>
 </div>
 
 </div>
@@ -348,7 +407,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As we write this book, the default <em>English word tokenizer</em> for fastai uses a library called <em>spaCy</em>. This uses a sophisticated rules engine that has special rules for URLs, individual special English words, and much more. Rather than directly using <code>SpacyTokenizer</code>, however, we'll use <code>WordTokenizer</code>, since that will always point to fastai's current default word tokenizer (which may not always be Spacy, depending when you're reading this).</p>
 <p>Let's try it out. We'll use fastai's <code>coll_repr(collection,n)</code> function to display the results; this displays the first <code>n</code> items of <code>collection</code>, along with the full size--it's what <code>L</code> uses by default. Not that fastai's tokenizers take a collection of documents to tokenize, so we have to wrap <code>txt</code> in a list:</p>
@@ -378,7 +438,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(#201) [&#39;This&#39;,&#39;movie&#39;,&#39;,&#39;,&#39;which&#39;,&#39;I&#39;,&#39;just&#39;,&#39;discovered&#39;,&#39;at&#39;,&#39;the&#39;,&#39;video&#39;,&#39;store&#39;,&#39;,&#39;,&#39;has&#39;,&#39;apparently&#39;,&#39;sit&#39;,&#39;around&#39;,&#39;for&#39;,&#39;a&#39;,&#39;couple&#39;,&#39;of&#39;,&#39;years&#39;,&#39;without&#39;,&#39;a&#39;,&#39;distributor&#39;,&#39;.&#39;,&#39;It&#39;,&#34;&#39;s&#34;,&#39;easy&#39;,&#39;to&#39;,&#39;see&#39;...]
+<pre>(#201) ['This','movie',',','which','I','just','discovered','at','the','video','store',',','has','apparently','sit','around','for','a','couple','of','years','without','a','distributor','.','It',"'s",'easy','to','see'...]
 </pre>
 </div>
 </div>
@@ -389,7 +449,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As you see, spaCy has mainly just separated out the words and punctuation. But it does something else here too: it has split "it's" into "it" and "'s". That makes intuitive sense--these are separate words, really. Tokenization is a surprisingly subtle task, when you think about all the little details that have to be handled. spaCy handles these for us, for instance, here we see that "." is separated when it terminates a sentence, but not in an acronym or number:</p>
 
@@ -403,7 +464,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">first</span><span class="p">(</span><span class="n">spacy</span><span class="p">([</span><span class="s1">&#39;The U.S. dollar $1 is $1.00.&#39;</span><span class="p">]))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">first</span><span class="p">(</span><span class="n">spacy</span><span class="p">([</span><span class="s1">'The U.S. dollar $1 is $1.00.'</span><span class="p">]))</span>
 </pre></div>
 
     </div>
@@ -418,7 +479,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(#9) [&#39;The&#39;,&#39;U.S.&#39;,&#39;dollar&#39;,&#39;$&#39;,&#39;1&#39;,&#39;is&#39;,&#39;$&#39;,&#39;1.00&#39;,&#39;.&#39;]</pre>
+<pre>(#9) ['The','U.S.','dollar','$','1','is','$','1.00','.']</pre>
 </div>
 
 </div>
@@ -429,7 +490,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>fastai then adds some additional functionality to the tokenization process with the <code>Tokenizer</code> class:</p>
 
@@ -457,7 +519,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(#228) [&#39;xxbos&#39;,&#39;xxmaj&#39;,&#39;this&#39;,&#39;movie&#39;,&#39;,&#39;,&#39;which&#39;,&#39;i&#39;,&#39;just&#39;,&#39;discovered&#39;,&#39;at&#39;,&#39;the&#39;,&#39;video&#39;,&#39;store&#39;,&#39;,&#39;,&#39;has&#39;,&#39;apparently&#39;,&#39;sit&#39;,&#39;around&#39;,&#39;for&#39;,&#39;a&#39;,&#39;couple&#39;,&#39;of&#39;,&#39;years&#39;,&#39;without&#39;,&#39;a&#39;,&#39;distributor&#39;,&#39;.&#39;,&#39;xxmaj&#39;,&#39;it&#39;,&#34;&#39;s&#34;,&#39;easy&#39;...]
+<pre>(#228) ['xxbos','xxmaj','this','movie',',','which','i','just','discovered','at','the','video','store',',','has','apparently','sit','around','for','a','couple','of','years','without','a','distributor','.','xxmaj','it',"'s",'easy'...]
 </pre>
 </div>
 </div>
@@ -468,7 +530,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There are now some tokens added that start with the characters "xx", which is not a common word prefix in English. These are <em>special tokens</em>.</p>
 <p>For example, the first item in the list, "xxbos", is a special token that indicates the start of a new text ("BOS" is a standard NLP acronym which means "beginning of stream"). By recognizing this start token, the model will be able to learn it needs to "forget" what was said previously and focus on upcoming words.</p>
@@ -525,27 +588,37 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As always, you can look at the source code of each of them in a notebook by typing</p>
 
 <pre><code>??replace_rep</code></pre>
 <p>Here is a brief summary of what each does:</p>
 <ul>
-<li><code>fix_html</code>:: replace special HTML characters by a readable version (IMDb reviwes have quite a few of them for instance) ;</li>
-<li><code>replace_rep</code>:: replace any character repeated three times or more by a special token for repetition (xxrep), the number of times it's repeated, then the character ;</li>
-<li><code>replace_wrep</code>:: replace any word repeated three times or more by a special token for word repetition (xxwrep), the number of times it's repeated, then the word ;</li>
-<li><code>spec_add_spaces</code>:: add spaces around / and # ;</li>
-<li><code>rm_useless_spaces</code>:: remove all repetitions of the space character ;</li>
-<li><code>replace_all_caps</code>:: lowercase a word written in all caps and adds a special token for all caps (xxcap) in front of it ;</li>
-<li><code>replace_maj</code>:: lowercase a capitalized word and adds a special token for capitalized (xxmaj) in front of it ;</li>
-<li><code>lowercase</code>:: lowercase all text and adds a special token at the beginning (xxbos) and/or the end (xxeos).</li>
+<li>
+<code>fix_html</code>:: replace special HTML characters by a readable version (IMDb reviwes have quite a few of them for instance) ;</li>
+<li>
+<code>replace_rep</code>:: replace any character repeated three times or more by a special token for repetition (xxrep), the number of times it's repeated, then the character ;</li>
+<li>
+<code>replace_wrep</code>:: replace any word repeated three times or more by a special token for word repetition (xxwrep), the number of times it's repeated, then the word ;</li>
+<li>
+<code>spec_add_spaces</code>:: add spaces around / and # ;</li>
+<li>
+<code>rm_useless_spaces</code>:: remove all repetitions of the space character ;</li>
+<li>
+<code>replace_all_caps</code>:: lowercase a word written in all caps and adds a special token for all caps (xxcap) in front of it ;</li>
+<li>
+<code>replace_maj</code>:: lowercase a capitalized word and adds a special token for capitalized (xxmaj) in front of it ;</li>
+<li>
+<code>lowercase</code>:: lowercase all text and adds a special token at the beginning (xxbos) and/or the end (xxeos).</li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's take a look at a few of them in action:</p>
 
@@ -559,7 +632,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">coll_repr</span><span class="p">(</span><span class="n">tkn</span><span class="p">(</span><span class="s1">&#39;&amp;copy;   Fast.ai www.fast.ai/INDEX&#39;</span><span class="p">),</span> <span class="mi">31</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">coll_repr</span><span class="p">(</span><span class="n">tkn</span><span class="p">(</span><span class="s1">'&amp;copy;   Fast.ai www.fast.ai/INDEX'</span><span class="p">),</span> <span class="mi">31</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -574,7 +647,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#34;(#11) [&#39;xxbos&#39;,&#39;©&#39;,&#39;xxmaj&#39;,&#39;fast.ai&#39;,&#39;xxrep&#39;,&#39;3&#39;,&#39;w&#39;,&#39;.fast.ai&#39;,&#39;/&#39;,&#39;xxup&#39;,&#39;index&#39;...]&#34;</pre>
+<pre>"(#11) ['xxbos','©','xxmaj','fast.ai','xxrep','3','w','.fast.ai','/','xxup','index'...]"</pre>
 </div>
 
 </div>
@@ -585,20 +658,25 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now let's have a look at how subword tokenization would work.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Subword-tokenization">Subword tokenization<a class="anchor-link" href="#Subword-tokenization"> </a></h3>
+<h3 id="Subword-tokenization">
+<a class="anchor" href="#Subword-tokenization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subword tokenization<a class="anchor-link" href="#Subword-tokenization"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In addition to the <em>word tokenization</em> approach seen in the last section, another popular tokenization method is <em>subword tokenization</em>. Word tokenization relies on an assumption that spaces provide a useful separation of components of meaning in a sentence. However, this assumption is not always appropriate. For instance, consider this sentence: 我的名字是郝杰瑞 (which means "My name is Jeremy Howard" in Chinese). That's not going to work very well with a word tokenizer, because there are no spaces in it! Languages like Chinese and Japanese don't use spaces, and in fact they don't even have a well-defined concept of a "word". There are also languages, like Turkish and Hungarian, which can add many bits together without spaces, to create very long words which include a lot of separate pieces of information.</p>
 <p>To handle these cases, it's generally best to use subword tokenization. This proceeds in two steps:</p>
@@ -628,7 +706,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We instantiate our tokenizer, passing in the size of the vocab we want to create, and then we need to "train" it. That is, we need to have it read our documents, and find the common sequences of characters, to create the vocab. This is done with <code>setup</code>. As we'll see shortly, <code>setup</code> is a special fastai method that is called automatically in our usual data processing pipelines. Since we're doing everything manually at the moment, however, we have to call it ourselves. Here's a function that does these steps for a given vocab size, and shows an example output:</p>
 
@@ -645,7 +724,7 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">subword</span><span class="p">(</span><span class="n">sz</span><span class="p">):</span>
     <span class="n">sp</span> <span class="o">=</span> <span class="n">SubwordTokenizer</span><span class="p">(</span><span class="n">vocab_sz</span><span class="o">=</span><span class="n">sz</span><span class="p">)</span>
     <span class="n">sp</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">txts</span><span class="p">)</span>
-    <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">first</span><span class="p">(</span><span class="n">sp</span><span class="p">([</span><span class="n">txt</span><span class="p">]))[:</span><span class="mi">40</span><span class="p">])</span>
+    <span class="k">return</span> <span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">first</span><span class="p">(</span><span class="n">sp</span><span class="p">([</span><span class="n">txt</span><span class="p">]))[:</span><span class="mi">40</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -655,7 +734,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's try it out:</p>
 
@@ -693,7 +773,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;▁This ▁movie , ▁which ▁I ▁just ▁dis c over ed ▁at ▁the ▁video ▁st or e , ▁has ▁a p par ent ly ▁s it ▁around ▁for ▁a ▁couple ▁of ▁years ▁without ▁a ▁dis t ri but or . ▁It&#39;</pre>
+<pre>'▁This ▁movie , ▁which ▁I ▁just ▁dis c over ed ▁at ▁the ▁video ▁st or e , ▁has ▁a p par ent ly ▁s it ▁around ▁for ▁a ▁couple ▁of ▁years ▁without ▁a ▁dis t ri but or . ▁It'</pre>
 </div>
 
 </div>
@@ -704,7 +784,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>When using fastai's subword tokenizer, the special character <code>▁</code> represents a space character in the original text.</p>
 <p>If we use a smaller vocab, then each token will represent fewer characters, and it will take more tokens to represent a sentence:</p>
@@ -743,7 +824,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;▁ T h i s ▁movie , ▁w h i ch ▁I ▁ j us t ▁ d i s c o ver ed ▁a t ▁the ▁ v id e o ▁ st or e , ▁h a s&#39;</pre>
+<pre>'▁ T h i s ▁movie , ▁w h i ch ▁I ▁ j us t ▁ d i s c o ver ed ▁a t ▁the ▁ v id e o ▁ st or e , ▁h a s'</pre>
 </div>
 
 </div>
@@ -754,7 +835,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>On the other hand, if we use a larger vocab, then most common English words will end up in the vocab themselves, and we will not need as many to represent a sentence:</p>
 
@@ -792,7 +874,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#34;▁This ▁movie , ▁which ▁I ▁just ▁discover ed ▁at ▁the ▁video ▁store , ▁has ▁apparently ▁sit ▁around ▁for ▁a ▁couple ▁of ▁years ▁without ▁a ▁distributor . ▁It &#39; s ▁easy ▁to ▁see ▁why . ▁The ▁story ▁of ▁two ▁friends ▁living&#34;</pre>
+<pre>"▁This ▁movie , ▁which ▁I ▁just ▁discover ed ▁at ▁the ▁video ▁store , ▁has ▁apparently ▁sit ▁around ▁for ▁a ▁couple ▁of ▁years ▁without ▁a ▁distributor . ▁It ' s ▁easy ▁to ▁see ▁why . ▁The ▁story ▁of ▁two ▁friends ▁living"</pre>
 </div>
 
 </div>
@@ -803,7 +885,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Picking a subword vocab size represents a compromise: a larger vocab means more fewer tokens per sentence, which means faster training, less memory, and less state for the model to remember; but on the downside, it means larger embedding matrices, which require more data to learn.</p>
 <p>Overall, subword tokenization provides a way to easily scale between character tokenization (i.e. use a small subword vocab) and word tokenization (i.e. use a large subword vocab), and handles every human language without needing language-specific algorithms to be developed. It can even handle other "languages" such as genomic sequences or MIDI music notation! For this reason, in the last year its popularity has soared, and it seems likely to become the most common tokenization approach (it may well already be, by the time you read this!)</p>
@@ -811,20 +894,25 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Once our texts have been split into tokens, we need to convert them to numbers.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Numericalization-with-fastai">Numericalization with fastai<a class="anchor-link" href="#Numericalization-with-fastai"> </a></h3>
+<h3 id="Numericalization-with-fastai">
+<a class="anchor" href="#Numericalization-with-fastai" aria-hidden="true"><span class="octicon octicon-link"></span></a>Numericalization with fastai<a class="anchor-link" href="#Numericalization-with-fastai"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Numericalization is the process of mapping tokens to integers. It's basically identical to the steps necessary to create a <code>Category</code> variable, such as the dependent variable of digits in MNIST:</p>
 <ol>
@@ -857,7 +945,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(#228) [&#39;xxbos&#39;,&#39;xxmaj&#39;,&#39;this&#39;,&#39;movie&#39;,&#39;,&#39;,&#39;which&#39;,&#39;i&#39;,&#39;just&#39;,&#39;discovered&#39;,&#39;at&#39;,&#39;the&#39;,&#39;video&#39;,&#39;store&#39;,&#39;,&#39;,&#39;has&#39;,&#39;apparently&#39;,&#39;sit&#39;,&#39;around&#39;,&#39;for&#39;,&#39;a&#39;,&#39;couple&#39;,&#39;of&#39;,&#39;years&#39;,&#39;without&#39;,&#39;a&#39;,&#39;distributor&#39;,&#39;.&#39;,&#39;xxmaj&#39;,&#39;it&#39;,&#34;&#39;s&#34;,&#39;easy&#39;...]
+<pre>(#228) ['xxbos','xxmaj','this','movie',',','which','i','just','discovered','at','the','video','store',',','has','apparently','sit','around','for','a','couple','of','years','without','a','distributor','.','xxmaj','it',"'s",'easy'...]
 </pre>
 </div>
 </div>
@@ -868,7 +956,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Just like <code>SubwordTokenizer</code>, we need to call <code>setup</code> on <code>Numericalize</code>; this is how we create the <code>vocab</code>. That means we'll need our tokenized corpus first. Since tokenization takes a while, it's done in parallel by fastai; but for this manual walk-thru, we'll use a small subset:</p>
 
@@ -898,7 +987,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(#228) [&#39;xxbos&#39;,&#39;xxmaj&#39;,&#39;this&#39;,&#39;movie&#39;,&#39;,&#39;,&#39;which&#39;,&#39;i&#39;,&#39;just&#39;,&#39;discovered&#39;,&#39;at&#39;...]</pre>
+<pre>(#228) ['xxbos','xxmaj','this','movie',',','which','i','just','discovered','at'...]</pre>
 </div>
 
 </div>
@@ -909,7 +998,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can pass this to <code>setup</code> to create our <code>vocab</code>:</p>
 
@@ -940,7 +1030,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#34;(#2000) [&#39;xxunk&#39;,&#39;xxpad&#39;,&#39;xxbos&#39;,&#39;xxeos&#39;,&#39;xxfld&#39;,&#39;xxrep&#39;,&#39;xxwrep&#39;,&#39;xxup&#39;,&#39;xxmaj&#39;,&#39;the&#39;,&#39;.&#39;,&#39;,&#39;,&#39;a&#39;,&#39;and&#39;,&#39;of&#39;,&#39;to&#39;,&#39;is&#39;,&#39;in&#39;,&#39;i&#39;,&#39;it&#39;...]&#34;</pre>
+<pre>"(#2000) ['xxunk','xxpad','xxbos','xxeos','xxfld','xxrep','xxwrep','xxup','xxmaj','the','.',',','a','and','of','to','is','in','i','it'...]"</pre>
 </div>
 
 </div>
@@ -951,7 +1041,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Our special rules tokens appear first, and then every word appears once, in frequency order. The defaults to <code>Numericalize</code> are <code>min_freq=3,max_vocab=60000</code>. <code>max_vocab=60000</code> results in fastai replacing all words other than the most common 60000 with a special <em>unknown word</em> token <code>xxunk</code>. This is useful to avoid having an overly large embedding matrix, since that can slow down training, use up too much memory, and can also mean that there isn't enough data to train useful representations for rare words. However, this last issue is better handled by setting <code>min_freq</code>; the default <code>min_freq=3</code> means that any word appearing less than three times is replaced with <code>xxunk</code>.</p>
 <p>Fastai can also numericalize your dataset using a vocab that you provide, by passing a list of words as the <code>vocab</code> parameter.</p>
@@ -993,7 +1084,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This time, our tokens have been converted to a tensor of integers that our model can receive. We can check that they map back to the original text:</p>
 
@@ -1007,7 +1099,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">num</span><span class="o">.</span><span class="n">vocab</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">num</span><span class="o">.</span><span class="n">vocab</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1022,7 +1114,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;xxbos xxmaj this movie , which i just xxunk at the video store , has apparently sit around for a&#39;</pre>
+<pre>'xxbos xxmaj this movie , which i just xxunk at the video store , has apparently sit around for a'</pre>
 </div>
 
 </div>
@@ -1033,24 +1125,30 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now that we have numbers, we need to put them in batches for our model.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Putting-our-texts-into-batches-for-a-language-model">Putting our texts into batches for a language model<a class="anchor-link" href="#Putting-our-texts-into-batches-for-a-language-model"> </a></h3>
+<h3 id="Putting-our-texts-into-batches-for-a-language-model">
+<a class="anchor" href="#Putting-our-texts-into-batches-for-a-language-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Putting our texts into batches for a language model<a class="anchor-link" href="#Putting-our-texts-into-batches-for-a-language-model"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>When dealing with images, we needed to resize them all to the same height and width before grouping them together in a mini-batch so they could stack together efficiently in a single tensor. Here it's going to be a little different, because one cannot simply resize text to a desired length. Also, we want our language model to read text in order, so that it can efficiently predict what the next word is. All the difficulty of a language model loader is that each new batch should begin precisely where the previous left off.</p>
 <p>Let's start with an example and imagine our text is the following:</p>
-<blockquote><p>: In this chapter, we will go back over the example of classifying movie reviews we studied in chapter 1 and dig deeper under the surface. First we will look at the processing steps necessary to convert text into numbers and how to customize it. By doing this, we'll have another example of the PreProcessor used in the data block API.\nThen we will study how we build a language model and train it for a while.
+<blockquote>
+<p>: In this chapter, we will go back over the example of classifying movie reviews we studied in chapter 1 and dig deeper under the surface. First we will look at the processing steps necessary to convert text into numbers and how to customize it. By doing this, we'll have another example of the PreProcessor used in the data block API.\nThen we will study how we build a language model and train it for a while.
 The tokenization process will add special tokens and deal with punctuation to return this text:
 : xxbos xxmaj in this chapter , we will go back over the example of classifying movie reviews we studied in chapter 1 and dig deeper under the surface . xxmaj first we will look at the processing steps necessary to convert text into numbers and how to customize it . xxmaj by doing this , we 'll have another example of the preprocessor used in the data block xxup api . \n xxmaj then we will study how we build a language model and train it for a while .
 We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, then we need to break this text in 6 contiguous parts of length 15:</p>
@@ -1059,11 +1157,12 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00071.png" alt="TK: add title" style="max-width: 800px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00071.png" alt="TK: add title" style="max-width: 800px">
     
     
       <figcaption>TK: add title</figcaption>
@@ -1074,7 +1173,8 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In a perfect world, we could then give this one batch to our model. But that doesn't work, because this would very likely not fit in our GPU memory (here we have 90 tokens, but all the IMDb reviews together give several millions of tokens).</p>
 <p>So in fact we will need to divide this array more finely into subarrays of a fixed sequence length. It is important to maintain order within and across these subarrays, because we will use a model that maintains state in order so that it remembers what it read previously when predicting what comes next.</p>
@@ -1150,7 +1250,8 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Then</p>
 
@@ -1224,7 +1325,8 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And finally</p>
 
@@ -1298,7 +1400,8 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Going back to our dataset, the first step is to transform the individual texts into a stream by concatenating them together. As with images, it's best to randomize the order in which the inputs come, so at the beginning of each epoch we will shuffle the entries to make a new stream (we shuffle the order of the documents, not the order of the words inside, otherwise the text would not make sense anymore).</p>
 <p>We will then cut this stream into a certain number of batches (which is our <em>batch size</em>). For instance, if the stream has 50,000 tokens and we set a batch size of 10, this will give us 10 mini-streams of 5,000 tokens. What is important is that we preserve the order of the tokens (so from 1 to 5,000 for the first mini-stream, then from 5,001 to 10,000...) because we want the model to read continuous rows of text (as in our example above). This is why each text has been added a <code>xxbos</code> token during preprocessing, so that the model knows when it reads the stream we are beginning a new entry.</p>
@@ -1325,7 +1428,8 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>...and then passing that to <code>LMDataLoader</code>:</p>
 
@@ -1349,7 +1453,8 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's confirm that this gives the expected results, by grabbing the first batch:</p>
 
@@ -1390,7 +1495,8 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>...and then looking at the first row of the independent variable, which should be the start of the first text:</p>
 
@@ -1404,7 +1510,7 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">num</span><span class="o">.</span><span class="n">vocab</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">][:</span><span class="mi">20</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">num</span><span class="o">.</span><span class="n">vocab</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">][:</span><span class="mi">20</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -1419,7 +1525,7 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;xxbos xxmaj this movie , which i just xxunk at the video store , has apparently sit around for a&#39;</pre>
+<pre>'xxbos xxmaj this movie , which i just xxunk at the video store , has apparently sit around for a'</pre>
 </div>
 
 </div>
@@ -1430,7 +1536,8 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>...and the first row of the dependent variable, which is the same thing offset by one token:</p>
 
@@ -1444,7 +1551,7 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">num</span><span class="o">.</span><span class="n">vocab</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">][:</span><span class="mi">20</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">num</span><span class="o">.</span><span class="n">vocab</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">][:</span><span class="mi">20</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -1459,7 +1566,7 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;xxmaj this movie , which i just xxunk at the video store , has apparently sit around for a couple&#39;</pre>
+<pre>'xxmaj this movie , which i just xxunk at the video store , has apparently sit around for a couple'</pre>
 </div>
 
 </div>
@@ -1470,20 +1577,25 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This concludes all the preprocessing steps we need to apply to our data. We are now ready to train out text classifier.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Training-a-text-classifier">Training a text classifier<a class="anchor-link" href="#Training-a-text-classifier"> </a></h2>
+<h2 id="Training-a-text-classifier">
+<a class="anchor" href="#Training-a-text-classifier" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training a text classifier<a class="anchor-link" href="#Training-a-text-classifier"> </a>
+</h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As we have seen at the beginning of this chapter to train a state-of-the-art text classifier using transfer learning will take two steps: first we need to fine-tune our langauge model pretrained on Wikipedia to the corpus of IMDb reviews, then we can use that model to train a classifier.</p>
 <p>As usual, let's start with assemblng our data.</p>
@@ -1491,13 +1603,17 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Language-model-using-DataBlock">Language model using DataBlock<a class="anchor-link" href="#Language-model-using-DataBlock"> </a></h3>
+<h3 id="Language-model-using-DataBlock">
+<a class="anchor" href="#Language-model-using-DataBlock" aria-hidden="true"><span class="octicon octicon-link"></span></a>Language model using DataBlock<a class="anchor-link" href="#Language-model-using-DataBlock"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>fastai handles tokenization and numericalization automatically when <code>TextBlock</code> is passed to <code>DataBlock</code>. All of the arguments that can be passed to <code>Tokenize</code> and <code>Numericalize</code> can also be passed to <code>TextBlock</code>. In the next chapter we'll discuss the easiest ways to run each of these steps separately, to ease debugging--but you can always just debug by running them manually on a subset of your data as shown in the previous sections. And don't forget about <code>DataBlock</code>'s handy <code>summary</code> method, which is very useful for debugging data issues.</p>
 <p>Here's how we use <code>TextBlock</code> to create a language model, using fastai's defaults:</p>
@@ -1512,7 +1628,7 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_imdb</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">get_text_files</span><span class="p">,</span> <span class="n">folders</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;unsup&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_imdb</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">get_text_files</span><span class="p">,</span> <span class="n">folders</span><span class="o">=</span><span class="p">[</span><span class="s1">'train'</span><span class="p">,</span> <span class="s1">'test'</span><span class="p">,</span> <span class="s1">'unsup'</span><span class="p">])</span>
 
 <span class="n">dls_lm</span> <span class="o">=</span> <span class="n">DataBlock</span><span class="p">(</span>
     <span class="n">blocks</span><span class="o">=</span><span class="n">TextBlock</span><span class="o">.</span><span class="n">from_folder</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">is_lm</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
@@ -1527,7 +1643,8 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>One thing that's different to previous types used in <code>DataBlock</code> is that we're not just using the class directly (i.e. <code>TextBlock(...)</code>, but instead are calling a <em>class method</em>. A class method is a Python method which, as the name suggests, belongs to a <em>class</em> rather than an <em>object</em>. (Be sure to search online for more information about class methods if you're not familiar with them, since they're commonly used in many Python libraries and applications; we've used them a few times previously in the book, but haven't called attention to them.) The reason that <code>TextBlock</code> is special is that setting up the numericalizer's vocab can take a long time (we have to read every document and tokenize it to get the vocab); to be as efficient as possible fastai does things such as:</p>
 <ul>
@@ -1592,16 +1709,20 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now that our data is ready, we can fine-tune the pretrained language model.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Fine-tuning-the-language-model">Fine tuning the language model<a class="anchor-link" href="#Fine-tuning-the-language-model"> </a></h3>
+<h3 id="Fine-tuning-the-language-model">
+<a class="anchor" href="#Fine-tuning-the-language-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fine tuning the language model<a class="anchor-link" href="#Fine-tuning-the-language-model"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -1631,7 +1752,8 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The loss function used by default is cross entropy loss, since we essentially have a classification problem (the different categories being the words in our vocab). A metric often used in NLP for language models is called <em>perplexity</em>. It is the exponential of the loss (i.e. <code>torch.exp(cross_entropy)</code>). We  will also add accuracy, to see how many times our model is right when trying to predict the next word, since cross entropy (as we've seen) is both hard to interpret, and also tells you more about the model's confidence, rather than just its accuracy</p>
 <p>The grey first arrow in our overall picture has been done for us and made available as a pretrained model in fastai; we've now built the <code>DataLoaders</code> and <code>Learner</code> for the second stage, and we're ready to fine-tune it!</p>
@@ -1639,11 +1761,12 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00027.png" alt="Diagram of the ULMFiT process" style="max-width: 450px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00027.png" alt="Diagram of the ULMFiT process" style="max-width: 450px">
     
     
 </figure>
@@ -1652,7 +1775,8 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It takes quite a while to train each epoch, so we'll be saving the intermediate model results during the training process. Since <code>fine_tune</code> doesn't do that for us, we'll just use <code>fit_one_cycle</code>. Just like <code>cnn_learner</code>, <code>language_model_learner</code> automatically calls <code>freeze</code> when using a pretrained model (which is the default), so this will only train the embeddings (which is the only part of the model that contains randomly initialized weights--i.e. embeddings for words that are in our IMDb vocab, but aren't in the pretrained model vocab):</p>
 
@@ -1712,20 +1836,25 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This model takes a while to train, so it's a good opportunity to talk about saving intermediary results.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Saving-and-loading-models">Saving and loading models<a class="anchor-link" href="#Saving-and-loading-models"> </a></h3>
+<h3 id="Saving-and-loading-models">
+<a class="anchor" href="#Saving-and-loading-models" aria-hidden="true"><span class="octicon octicon-link"></span></a>Saving and loading models<a class="anchor-link" href="#Saving-and-loading-models"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>You can easily save the state of your model like so:</p>
 
@@ -1739,7 +1868,7 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;1epoch&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">'1epoch'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1749,7 +1878,8 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It will create a file in <code>learn.path/models/</code> named "1epoch.pth". If you want to load your model in another machine after creating your <code>Learner</code> the same way, or resume training later, you can load the content of this file with:</p>
 
@@ -1763,7 +1893,7 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span> <span class="o">=</span> <span class="n">learn</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;1epoch&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span> <span class="o">=</span> <span class="n">learn</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'1epoch'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1773,7 +1903,8 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can them finetune the model after unfreezing:</p>
 
@@ -1906,7 +2037,8 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Once this is done, we save all of our model except the final layer that converts activations to probabilities of picking each token in our vocabulary. The model not including the final layer is called the <em>encoder</em>. We can save it with <code>save_encoder</code>:</p>
 
@@ -1920,7 +2052,7 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">save_encoder</span><span class="p">(</span><span class="s1">&#39;finetuned&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">save_encoder</span><span class="p">(</span><span class="s1">'finetuned'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1930,28 +2062,35 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>jargon: Encoder: The model not including the task-specific final layer(s). It means much the same thing as <em>body</em> when applied to vision CNNs, but tends to be more used for NLP and generative models.</p>
+<blockquote>
+<p>jargon: Encoder: The model not including the task-specific final layer(s). It means much the same thing as <em>body</em> when applied to vision CNNs, but tends to be more used for NLP and generative models.</p>
 </blockquote>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This completes the second stage of the text classification process: fine-tuning the language model. We can now fine tune this language model using the IMDb sentiment labels.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Text-generation">Text generation<a class="anchor-link" href="#Text-generation"> </a></h3>
+<h3 id="Text-generation">
+<a class="anchor" href="#Text-generation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Text generation<a class="anchor-link" href="#Text-generation"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Before using this to fine-tune a classifier on the review, we can use our model to generate random reviews: since it's trained to guess what the next word of the sentence is, we can use it to write new reviews:</p>
 
@@ -1965,7 +2104,7 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">TEXT</span> <span class="o">=</span> <span class="s2">&quot;I liked this movie because&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">TEXT</span> <span class="o">=</span> <span class="s2">"I liked this movie because"</span>
 <span class="n">N_WORDS</span> <span class="o">=</span> <span class="mi">40</span>
 <span class="n">N_SENTENCES</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">preds</span> <span class="o">=</span> <span class="p">[</span><span class="n">learn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">TEXT</span><span class="p">,</span> <span class="n">N_WORDS</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span> 
@@ -2010,7 +2149,7 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">preds</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">preds</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -2024,7 +2163,7 @@ We have separated the 90 tokens by spaces. Let's say we want a batch size of 6, 
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>i liked this movie because of its story and characters . The story line was very strong , very good for a sci - fi film . The main character , Alucard , was very well developed and brought the whole story
-i liked this movie because i like the idea of the premise of the movie , the ( very ) convenient virus ( which , when you have to kill a few people , the &#34; evil &#34; machine has to be used to protect
+i liked this movie because i like the idea of the premise of the movie , the ( very ) convenient virus ( which , when you have to kill a few people , the " evil " machine has to be used to protect
 </pre>
 </div>
 </div>
@@ -2035,7 +2174,8 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As you can see, we add some randomness (we pick a random word based on the probabilities returned by the model) so you don't get exactly the same review twice. Our model doesn't have any programmed knowledge of the structure of a sentence or grammar rules, yet it has clearly learned a lot about English sentences: we can see it capitalized properly (I is just transformed to i with our rules -- they require two characters or more to consider a word is capitalized -- so it's normal to see it lowercased), and is using consistent tense. The general review make sense at first glance, and it's only if you read carefully you can notice something is a bit off. Not bad for a model trained in a couple of hours!</p>
 <p>Our end goal wasn't to train a model to generate reviews, but to classify them... so let's use this model to do just that.</p>
@@ -2043,13 +2183,17 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Creating-the-classifier-DataLoaders">Creating the classifier DataLoaders<a class="anchor-link" href="#Creating-the-classifier-DataLoaders"> </a></h3>
+<h3 id="Creating-the-classifier-DataLoaders">
+<a class="anchor" href="#Creating-the-classifier-DataLoaders" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating the classifier DataLoaders<a class="anchor-link" href="#Creating-the-classifier-DataLoaders"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We're now moving from language model fine tuning, to classifier fine tuning. To re-cap, a language model predicts the next word of a document, so it doesn't need any external labels. A classifier, however, predicts some external label--in the case of IMDb, it's the sentiment of a document.</p>
 <p>This means that the structure of our <code>DataBlock</code> for NLP classification will look very familiar; it's actually nearly the same as we've seen for the many image classification datasets we've worked with:</p>
@@ -2067,8 +2211,8 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dls_clas</span> <span class="o">=</span> <span class="n">DataBlock</span><span class="p">(</span>
     <span class="n">blocks</span><span class="o">=</span><span class="p">(</span><span class="n">TextBlock</span><span class="o">.</span><span class="n">from_folder</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">vocab</span><span class="o">=</span><span class="n">dls_lm</span><span class="o">.</span><span class="n">vocab</span><span class="p">),</span><span class="n">CategoryBlock</span><span class="p">),</span>
     <span class="n">get_y</span> <span class="o">=</span> <span class="n">parent_label</span><span class="p">,</span>
-    <span class="n">get_items</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">get_text_files</span><span class="p">,</span> <span class="n">folders</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">]),</span>
-    <span class="n">splitter</span><span class="o">=</span><span class="n">GrandparentSplitter</span><span class="p">(</span><span class="n">valid_name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+    <span class="n">get_items</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">get_text_files</span><span class="p">,</span> <span class="n">folders</span><span class="o">=</span><span class="p">[</span><span class="s1">'train'</span><span class="p">,</span> <span class="s1">'test'</span><span class="p">]),</span>
+    <span class="n">splitter</span><span class="o">=</span><span class="n">GrandparentSplitter</span><span class="p">(</span><span class="n">valid_name</span><span class="o">=</span><span class="s1">'test'</span><span class="p">)</span>
 <span class="p">)</span><span class="o">.</span><span class="n">dataloaders</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">bs</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">seq_len</span><span class="o">=</span><span class="mi">72</span><span class="p">)</span>
 </pre></div>
 
@@ -2079,7 +2223,8 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Just like with image classification, <code>show_batch</code> shows the dependent variable (sentiment, in this case) with each independent variable (movie review text):</p>
 
@@ -2143,11 +2288,13 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Looking at the <code>DataBlock</code> definition above, every piece is familiar from previous data blocks we've built, with two important exceptions:</p>
 <ul>
-<li><code>TextBlock.from_folder</code> no longer has the <code>is_lm=True</code> parameter, and</li>
+<li>
+<code>TextBlock.from_folder</code> no longer has the <code>is_lm=True</code> parameter, and</li>
 <li>We pass the <code>vocab</code> we created for the language model fine-tuning.</li>
 </ul>
 <p>The reason that we pass the vocab of the language model is to make sure we use the same correspondence of token to index. Otherwise the embeddings we learned in our fine-tuned language model won't make any sense to this model, and the fine-tuning step won't be of any use.</p>
@@ -2173,7 +2320,8 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's now look at how many tokens each of these 10 movie reviews have:</p>
 
@@ -2213,7 +2361,8 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Remember, PyTorch <code>DataLoader</code>s need to collate all the items in a batch into a single tensor, and that a single tensor has a fixed shape (i.e. it has some particular length on every axis, and all items must be consistent). This should look a bit familiar: we had the same issue with images. In that case, we use cropping, padding, and/or squishing to make everything the same size. Cropping might not be a good idea for documents, because it seems likely we'd remove some key information (having said that, the same issue is true for images, and we use cropping there; data augmentation hasn't been well explored for NLP yet, so perhaps there are actually opportunities to use cropping in NLP too!) You can't really "squish" a document. So that leaves padding!</p>
 <p>We will expand the shortest texts to make them all the same size. To do this, we use a special token that will be ignored by our model. This is called <em>padding</em> (just like in vision). Additionally, to avoid memory issues and improve performance, we will batch together texts that are roughly the same lengths (with some shuffling for the training set). We do this by (approximately, for the training set) sorting the documents by length prior to each epoch. The result of this is that the documents collated into a single batch will tend of be of similar lengths. We won't make every batch, therefore, the same size, but will instead use the size of the largest document in each batch. (It is possible to do something similar with images, which is especially useful for irregularly sized rectangular images, although as we write these words, no library provides good support for this yet, and there aren't any papers covering it. It's something we're planning to add to fastai soon however, so have a look on the book website, where we'll add information about this if and when it's working well.)</p>
@@ -2241,7 +2390,8 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The final step prior to training the classifier is to load the encoder from our fine-tuned language model. We use <code>load_encoder</code> instead of <code>load</code> because we only have pretrained weights available for the encoder; <code>load</code> by default raises an exception if an incomplete model is loaded.</p>
 
@@ -2255,7 +2405,7 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span> <span class="o">=</span> <span class="n">learn</span><span class="o">.</span><span class="n">load_encoder</span><span class="p">(</span><span class="s1">&#39;finetuned&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span> <span class="o">=</span> <span class="n">learn</span><span class="o">.</span><span class="n">load_encoder</span><span class="p">(</span><span class="s1">'finetuned'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2265,13 +2415,17 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Fine-tuning-the-classifier">Fine tuning the classifier<a class="anchor-link" href="#Fine-tuning-the-classifier"> </a></h3>
+<h3 id="Fine-tuning-the-classifier">
+<a class="anchor" href="#Fine-tuning-the-classifier" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fine tuning the classifier<a class="anchor-link" href="#Fine-tuning-the-classifier"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The last step is to train with discriminative learning rates and <em>gradual unfreezing</em>. In computer vision, we often unfreeze the model all at once, but for NLP classifiers, we find that unfreezing a few layers at a time makes a real difference.</p>
 
@@ -2388,7 +2542,8 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Then we can unfreeze a bit more, and continue training:</p>
 
@@ -2447,7 +2602,8 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And finally, the whole model!</p>
 
@@ -2513,7 +2669,8 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We reach 94.3% accuracy, which was state-of-the-art just three years ago. By training a model on all the texts read backwards and averaging the predictions of those two models, we can even get to 95.1% accuracy, which was the state of the art introduced by the ULMFiT paper. It was only beaten a few months ago, fine-tuning a much bigger model and using expensive data augmentation (translating sentences in another language and back, using another model for translation).</p>
 <p>Using a pretrained model let us build a fine-tuned language model that was pretty powerful, to either generate fake reviews or help classify them. It is good to remember that this technology can also be used for malign purposes.</p>
@@ -2521,9 +2678,12 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Disinformation-and-language-models">Disinformation and language models<a class="anchor-link" href="#Disinformation-and-language-models"> </a></h2>
+<h2 id="Disinformation-and-language-models">
+<a class="anchor" href="#Disinformation-and-language-models" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disinformation and language models<a class="anchor-link" href="#Disinformation-and-language-models"> </a>
+</h2>
 </div>
 </div>
 </div>
@@ -2534,11 +2694,12 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/ethics/image16.png" alt="" style="max-width: 700px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/ethics/image16.png" alt="" style="max-width: 700px">
     
     
       <figcaption>Comments received during the neutral neutrality debate</figcaption>
@@ -2557,11 +2718,12 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/ethics/image14.png" alt="An algorithm talking to itself on Reddit" style="max-width: 600px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/ethics/image14.png" alt="An algorithm talking to itself on Reddit" style="max-width: 600px">
     
     
       <figcaption>An algorithm talking to itself on Reddit</figcaption>
@@ -2580,11 +2742,12 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/ethics/image15.jpeg" alt="" style="max-width: 400px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/ethics/image15.jpeg" alt="" style="max-width: 400px">
     
     
       <figcaption>Katie Jones' LinkedIn profile</figcaption>
@@ -2595,7 +2758,8 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Katie Jones was connected on LinkedIn to several members of mainstream Washington think tanks. But she didn't exist. That image you see is auto generated by a generative adversarial network, and somebody named Katie Jones has not, in fact, graduated from the Centre for Strategic and International Studies.</p>
 <p>Many people assume or hope that algorithms will come to our defence here. The hope is that we will develop classification algorithms which can automatically recognise auto generated content. The problem, however, is that this will always be an arms race, in which better classification (or discriminator) algorithms can be used to create better generation algorithms.</p>
@@ -2603,13 +2767,17 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Questionnaire">Questionnaire<a class="anchor-link" href="#Questionnaire"> </a></h2>
+<h2 id="Questionnaire">
+<a class="anchor" href="#Questionnaire" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questionnaire<a class="anchor-link" href="#Questionnaire"> </a>
+</h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
 <li>What is self-supervised learning?</li>
@@ -2639,13 +2807,17 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Further-research">Further research<a class="anchor-link" href="#Further-research"> </a></h3>
+<h3 id="Further-research">
+<a class="anchor" href="#Further-research" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further research<a class="anchor-link" href="#Further-research"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
 <li>See what you can learn about language models and disinformation. What are the best language models today? Have a look at some of their outputs. Do you find them convincing? How could a bad actor best use this to create conflict and uncertainty?</li>
@@ -2658,10 +2830,39 @@ i liked this movie because i like the idea of the premise of the movie , the ( v
 &lt;/div&gt;
  
 
-</katie_jones></p></div></div></div></ethics_reddit></p></div></div></div></disinformation></p></div></div></div></chapter_intro></p></div></div></div></chapter_nlp_dive></p></div></div></div></chapter_intro></p></div></div></div></chapter_nlp_dive></li></ul></div></div></div></ulmfit_process></p></chapter_intro></p></div></div></div></chapter_intro></p></div></div></div></div>
+</katie_jones></p>
+</div>
+</div></div></ethics_reddit></p>
+</div>
+</div></div></disinformation></p>
+</div>
+</div></div></chapter_intro></p>
+</div>
+</div></div></chapter_nlp_dive></p>
+</div>
+</div></div></chapter_intro></p>
+</div>
+</div></div></chapter_nlp_dive>
+</li>
+</ul>
+</div>
+</div></div></ulmfit_process></p></chapter_intro></p>
+</div>
+</div></div></chapter_intro></p>
+</div>
+</div></div>
+</div>
 
 
-  </div><a class="u-url" href="/fastbook/2020/03/19/_nlp.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="maxlein/fastbook"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/fastbook/2020/03/19/_nlp.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
