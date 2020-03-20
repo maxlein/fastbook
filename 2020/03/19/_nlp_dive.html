@@ -3,34 +3,34 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Title | fastpages</title>
+<title>Chapter 12 | fastpages</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Chapter 12" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="summary" />
-<meta property="og:description" content="summary" />
+<meta name="description" content="A language model from scratch" />
+<meta property="og:description" content="A language model from scratch" />
 <link rel="canonical" href="https://maxlein.github.io/fastbook/2020/03/19/_nlp_dive.html" />
 <meta property="og:url" content="https://maxlein.github.io/fastbook/2020/03/19/_nlp_dive.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-03-19T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2020-03-19T00:00:00-05:00","headline":"Title","description":"summary","mainEntityOfPage":{"@type":"WebPage","@id":"https://maxlein.github.io/fastbook/2020/03/19/_nlp_dive.html"},"@type":"BlogPosting","url":"https://maxlein.github.io/fastbook/2020/03/19/_nlp_dive.html","dateModified":"2020-03-19T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"datePublished":"2020-03-19T00:00:00-05:00","headline":"Chapter 12","description":"A language model from scratch","mainEntityOfPage":{"@type":"WebPage","@id":"https://maxlein.github.io/fastbook/2020/03/19/_nlp_dive.html"},"@type":"BlogPosting","url":"https://maxlein.github.io/fastbook/2020/03/19/_nlp_dive.html","dateModified":"2020-03-19T00:00:00-05:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastbook/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://maxlein.github.io/fastbook/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/fastbook/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Title | fastpages</title>
+<title>Chapter 12 | fastpages</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Chapter 12" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="summary" />
-<meta property="og:description" content="summary" />
+<meta name="description" content="A language model from scratch" />
+<meta property="og:description" content="A language model from scratch" />
 <link rel="canonical" href="https://maxlein.github.io/fastbook/2020/03/19/_nlp_dive.html" />
 <meta property="og:url" content="https://maxlein.github.io/fastbook/2020/03/19/_nlp_dive.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-03-19T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2020-03-19T00:00:00-05:00","headline":"Title","description":"summary","mainEntityOfPage":{"@type":"WebPage","@id":"https://maxlein.github.io/fastbook/2020/03/19/_nlp_dive.html"},"@type":"BlogPosting","url":"https://maxlein.github.io/fastbook/2020/03/19/_nlp_dive.html","dateModified":"2020-03-19T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"datePublished":"2020-03-19T00:00:00-05:00","headline":"Chapter 12","description":"A language model from scratch","mainEntityOfPage":{"@type":"WebPage","@id":"https://maxlein.github.io/fastbook/2020/03/19/_nlp_dive.html"},"@type":"BlogPosting","url":"https://maxlein.github.io/fastbook/2020/03/19/_nlp_dive.html","dateModified":"2020-03-19T00:00:00-05:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -88,7 +88,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="page-description">summary</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-03-19T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Chapter 12</h1><p class="page-description">A language model from scratch</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-03-19T00:00:00-05:00" itemprop="datePublished">
         Mar 19, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -117,7 +117,50 @@ window.onload = wrap_img;
       </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <!--
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#A-language-model-from-scratch">A language model from scratch </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#The-data">The data </a></li>
+<li class="toc-entry toc-h2"><a href="#Our-first-language-model-from-scratch">Our first language model from scratch </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Our-language-model-in-PyTorch">Our language model in PyTorch </a></li>
+<li class="toc-entry toc-h3"><a href="#Our-first-recurrent-neural-network">Our first recurrent neural network </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Improving-the-RNN">Improving the RNN </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Maintaining-the-state-of-an-RNN">Maintaining the state of an RNN </a></li>
+<li class="toc-entry toc-h3"><a href="#Creating-more-signal">Creating more signal </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Multilayer-RNNs">Multilayer RNNs </a></li>
+<li class="toc-entry toc-h2"><a href="#The-model">The model </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Exploding-or-disappearing-activations">Exploding or disappearing activations </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#LSTM">LSTM </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Building-an-LSTM-from-scratch">Building an LSTM from scratch </a></li>
+<li class="toc-entry toc-h3"><a href="#Training-a-language-model-using-LSTMs">Training a language model using LSTMs </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Regularizing-an-LSTM">Regularizing an LSTM </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Dropout">Dropout </a></li>
+<li class="toc-entry toc-h3"><a href="#AR-and-TAR-regularization">AR and TAR regularization </a></li>
+<li class="toc-entry toc-h3"><a href="#Training-a-weight-tied-regularized-LSTM">Training a weight-tied regularized LSTM </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Conclusion">Conclusion </a></li>
+<li class="toc-entry toc-h2"><a href="#Questionnaire">Questionnaire </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Further-research">Further research </a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -133,9 +176,12 @@ window.onload = wrap_img;
 </div>
     
 [[chapter_nlp_dive]]
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="A-language-model-from-scratch">A language model from scratch<a class="anchor-link" href="#A-language-model-from-scratch"> </a></h1>
+<h1 id="A-language-model-from-scratch">
+<a class="anchor" href="#A-language-model-from-scratch" aria-hidden="true"><span class="octicon octicon-link"></span></a>A language model from scratch<a class="anchor-link" href="#A-language-model-from-scratch"> </a>
+</h1>
 </div>
 </div>
 </div>
@@ -147,28 +193,35 @@ window.onload = wrap_img;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-data">The data<a class="anchor-link" href="#The-data"> </a></h2>
+<h2 id="The-data">
+<a class="anchor" href="#The-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>The data<a class="anchor-link" href="#The-data"> </a>
+</h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Whenever we start working on a new problem, we always first try to think of the simplest dataset we can which would allow us to try out methods quickly and easily, and interpret the results. When we started working on language modelling a few years ago, we didn't find any datasets that would allow for quick prototyping, so we made one. We call it <em>human numbers</em>, and it simply contains the first 10,000 words written out in English.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>j: One of the most common practical mistakes I see even amongst highly experienced practitioners is failing to use appropriate datasets at appropriate times during the analysis process. In particular, most people tend to start with datasets which are too big and too complicated.</p>
+<blockquote>
+<p>j: One of the most common practical mistakes I see even amongst highly experienced practitioners is failing to use appropriate datasets at appropriate times during the analysis process. In particular, most people tend to start with datasets which are too big and too complicated.</p>
 </blockquote>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can download, extract, and take a look at our dataset in the usual way:</p>
 
@@ -215,7 +268,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(#2) [Path(&#39;train.txt&#39;),Path(&#39;valid.txt&#39;)]</pre>
+<pre>(#2) [Path('train.txt'),Path('valid.txt')]</pre>
 </div>
 
 </div>
@@ -226,7 +279,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's open those two files and see what's inside. At first we'll join all of those texts together and ignore the split train/valid given by the dataset, we will come back to it later on:</p>
 
@@ -241,8 +295,8 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lines</span> <span class="o">=</span> <span class="n">L</span><span class="p">()</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">&#39;train.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="n">lines</span> <span class="o">+=</span> <span class="n">L</span><span class="p">(</span><span class="o">*</span><span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">&#39;valid.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="n">lines</span> <span class="o">+=</span> <span class="n">L</span><span class="p">(</span><span class="o">*</span><span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">'train.txt'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="n">lines</span> <span class="o">+=</span> <span class="n">L</span><span class="p">(</span><span class="o">*</span><span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">'valid.txt'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="n">lines</span> <span class="o">+=</span> <span class="n">L</span><span class="p">(</span><span class="o">*</span><span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>
 <span class="n">lines</span>
 </pre></div>
 
@@ -258,7 +312,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(#9998) [&#39;one \n&#39;,&#39;two \n&#39;,&#39;three \n&#39;,&#39;four \n&#39;,&#39;five \n&#39;,&#39;six \n&#39;,&#39;seven \n&#39;,&#39;eight \n&#39;,&#39;nine \n&#39;,&#39;ten \n&#39;...]</pre>
+<pre>(#9998) ['one \n','two \n','three \n','four \n','five \n','six \n','seven \n','eight \n','nine \n','ten \n'...]</pre>
 </div>
 
 </div>
@@ -269,7 +323,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We take all those lines and concatenate them in one big stream. To mark when we go from one number to the next, we use a '.' as separation:</p>
 
@@ -283,7 +338,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39; . &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">l</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">' . '</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">l</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">])</span>
 <span class="n">text</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>
 </pre></div>
 
@@ -299,7 +354,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;one . two . three . four . five . six . seven . eight . nine . ten . eleven . twelve . thirteen . fo&#39;</pre>
+<pre>'one . two . three . four . five . six . seven . eight . nine . ten . eleven . twelve . thirteen . fo'</pre>
 </div>
 
 </div>
@@ -310,7 +365,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's use word tokenization for this dataset, by splitting on spaces:</p>
 
@@ -324,7 +380,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tokens</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tokens</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
 <span class="n">tokens</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
 </pre></div>
 
@@ -340,7 +396,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&#39;one&#39;, &#39;.&#39;, &#39;two&#39;, &#39;.&#39;, &#39;three&#39;, &#39;.&#39;, &#39;four&#39;, &#39;.&#39;, &#39;five&#39;, &#39;.&#39;]</pre>
+<pre>['one', '.', 'two', '.', 'three', '.', 'four', '.', 'five', '.']</pre>
 </div>
 
 </div>
@@ -351,7 +407,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>To numericalize, we have to create a list of all the unique tokens (our <em>vocab</em>):</p>
 
@@ -381,7 +438,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(#30) [&#39;one&#39;,&#39;.&#39;,&#39;two&#39;,&#39;three&#39;,&#39;four&#39;,&#39;five&#39;,&#39;six&#39;,&#39;seven&#39;,&#39;eight&#39;,&#39;nine&#39;...]</pre>
+<pre>(#30) ['one','.','two','three','four','five','six','seven','eight','nine'...]</pre>
 </div>
 
 </div>
@@ -392,7 +449,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Then we can convert our tokens into numbers by looking up the index of each in the vocab:</p>
 
@@ -434,20 +492,25 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now that we have some small dataset on which language modelling should be an easy task, we can build our first model.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Our-first-language-model-from-scratch">Our first language model from scratch<a class="anchor-link" href="#Our-first-language-model-from-scratch"> </a></h2>
+<h2 id="Our-first-language-model-from-scratch">
+<a class="anchor" href="#Our-first-language-model-from-scratch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Our first language model from scratch<a class="anchor-link" href="#Our-first-language-model-from-scratch"> </a>
+</h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>One simple way to turn this into a neural network would be to specify that we are going to predict each word based on the previous three words. Therefore, we could create a list of every sequence of three words as independent variables, and the next word after each sequence as the dependent variable.</p>
 <p>We can do that with plain Python. Let us do it first with tokens just to confirm what it looks like:</p>
@@ -477,7 +540,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(#21031) [([&#39;one&#39;, &#39;.&#39;, &#39;two&#39;], &#39;.&#39;),([&#39;.&#39;, &#39;three&#39;, &#39;.&#39;], &#39;four&#39;),([&#39;four&#39;, &#39;.&#39;, &#39;five&#39;], &#39;.&#39;),([&#39;.&#39;, &#39;six&#39;, &#39;.&#39;], &#39;seven&#39;),([&#39;seven&#39;, &#39;.&#39;, &#39;eight&#39;], &#39;.&#39;),([&#39;.&#39;, &#39;nine&#39;, &#39;.&#39;], &#39;ten&#39;),([&#39;ten&#39;, &#39;.&#39;, &#39;eleven&#39;], &#39;.&#39;),([&#39;.&#39;, &#39;twelve&#39;, &#39;.&#39;], &#39;thirteen&#39;),([&#39;thirteen&#39;, &#39;.&#39;, &#39;fourteen&#39;], &#39;.&#39;),([&#39;.&#39;, &#39;fifteen&#39;, &#39;.&#39;], &#39;sixteen&#39;)...]</pre>
+<pre>(#21031) [(['one', '.', 'two'], '.'),(['.', 'three', '.'], 'four'),(['four', '.', 'five'], '.'),(['.', 'six', '.'], 'seven'),(['seven', '.', 'eight'], '.'),(['.', 'nine', '.'], 'ten'),(['ten', '.', 'eleven'], '.'),(['.', 'twelve', '.'], 'thirteen'),(['thirteen', '.', 'fourteen'], '.'),(['.', 'fifteen', '.'], 'sixteen')...]</pre>
 </div>
 
 </div>
@@ -488,7 +551,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now we will do it with tensors of the numericalized values, which is what the model will actually use:</p>
 
@@ -529,7 +593,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Then we can batch those easily using the <code>DataLoader</code> class. For now we will split randomly the sequences.</p>
 
@@ -555,7 +620,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can now create a neural network architecture that takes three words as input, and returns a prediction of the probability of each possible next word in the vocab. We will use three standard linear layers, but with two tweaks.</p>
 <p>The first tweak is that the first linear layer will use only the first word's embedding as activations, the second layer will use the second word's embedding plus the first layer's output activations, and the third layer will use the third word's embedding plus the second layer's output activations. The key effect of this is that every word is interpreted in the information context of any words preceding it.</p>
@@ -565,13 +631,17 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Our-language-model-in-PyTorch">Our language model in PyTorch<a class="anchor-link" href="#Our-language-model-in-PyTorch"> </a></h3>
+<h3 id="Our-language-model-in-PyTorch">
+<a class="anchor" href="#Our-language-model-in-PyTorch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Our language model in PyTorch<a class="anchor-link" href="#Our-language-model-in-PyTorch"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can now create the language model module that we described earlier:</p>
 
@@ -620,11 +690,12 @@ window.onload = wrap_img;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00020.png" alt="Pictorial representation of simple neural network" style="max-width: 400px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00020.png" alt="Pictorial representation of simple neural network" style="max-width: 400px">
     
     
       <figcaption>Pictorial representation of simple neural network</figcaption>
@@ -642,11 +713,12 @@ window.onload = wrap_img;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00021.png" alt="Shapes used in our pictorial representations" style="max-width: 200px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00021.png" alt="Shapes used in our pictorial representations" style="max-width: 200px">
     
     
       <figcaption>Shapes used in our pictorial representations</figcaption>
@@ -664,11 +736,12 @@ window.onload = wrap_img;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00022.png" alt="Representation of our basic language model" style="max-width: 500px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00022.png" alt="Representation of our basic language model" style="max-width: 500px">
     
     
       <figcaption>Representation of our basic language model</figcaption>
@@ -679,7 +752,8 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>To simplify things, we've removed the details of the layer computation from each arrow. We've also color-coded the arrows, such that all arrows with the same color have the same weight matrix. For instance, all the input layers use the same embedding matrix, so they all have the same color (green).</p>
 <p>Let's try training this model and see how it goes:</p>
@@ -761,7 +835,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>To see if this is any good, let's check what would a very simple model give us. In this case we could always predict the most common token, so let's find out which token is the most often the target in our validation set:</p>
 
@@ -795,7 +870,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(tensor(29), &#39;thousand&#39;, 0.15165200855716662)</pre>
+<pre>(tensor(29), 'thousand', 0.15165200855716662)</pre>
 </div>
 
 </div>
@@ -806,35 +881,43 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The most common token has the index 29, which corresponds to the token 'thousand'. Always predicting this token would give us an accuracy of roughly 15\%, so we are faring way better!</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>A: My first guess was that the separator would be the most common token, since there is one for every number. But looking at <code>tokens</code> reminded me that large numbers are written with many words, so on the way to 10,000 you write "thousand" a lot: five thousand, five thousand and one, five thousand and two, etc.. Oops! Looking at your data is great for noticing subtle features and also embarrassingly obvious ones.</p>
+<blockquote>
+<p>A: My first guess was that the separator would be the most common token, since there is one for every number. But looking at <code>tokens</code> reminded me that large numbers are written with many words, so on the way to 10,000 you write "thousand" a lot: five thousand, five thousand and one, five thousand and two, etc.. Oops! Looking at your data is great for noticing subtle features and also embarrassingly obvious ones.</p>
 </blockquote>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This is a nice first baseline. Let's see how we can refactor this with a loop.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Our-first-recurrent-neural-network">Our first recurrent neural network<a class="anchor-link" href="#Our-first-recurrent-neural-network"> </a></h3>
+<h3 id="Our-first-recurrent-neural-network">
+<a class="anchor" href="#Our-first-recurrent-neural-network" aria-hidden="true"><span class="octicon octicon-link"></span></a>Our first recurrent neural network<a class="anchor-link" href="#Our-first-recurrent-neural-network"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Looking at the code for our module, we could simplify it by replacing the duplicated code that calls the layers with a for loop. As well as making our code simpler, this will also have the benefit that we could apply our module equally well to token sequences of different lengths; we would not be restricted to token lists of length three.</p>
 
@@ -869,7 +952,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's check that we get the same results using this refactoring:</p>
 
@@ -957,11 +1041,12 @@ window.onload = wrap_img;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00070.png" alt="Basic recurrent neural network" style="max-width: 400px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00070.png" alt="Basic recurrent neural network" style="max-width: 400px">
     
     
       <figcaption>Basic recurrent neural network</figcaption>
@@ -972,44 +1057,54 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>You will see that there is a set of activations which are being updated each time through the loop, and are stored in the variable <code>h</code> — this is called the <em>hidden state</em>.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>Jargon: hidden state: the activations that are updated at each step of a recurrent neural network</p>
+<blockquote>
+<p>Jargon: hidden state: the activations that are updated at each step of a recurrent neural network</p>
 </blockquote>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A neural network which is defined using a loop like this is called a <em>recurrent neural network</em>, also known as an RNN. It is important to realise that an RNN is not a complicated new architecture, but is simply a refactoring of a multilayer neural network using a for loop.</p>
-<blockquote><p>A: My true opinion: if they were called "looping neural networks", or LNNs, they would seem 50% less daunting!</p>
+<blockquote>
+<p>A: My true opinion: if they were called "looping neural networks", or LNNs, they would seem 50% less daunting!</p>
 </blockquote>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now that we know what an RNN is, let's try to make it a little bit beter.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Improving-the-RNN">Improving the RNN<a class="anchor-link" href="#Improving-the-RNN"> </a></h2>
+<h2 id="Improving-the-RNN">
+<a class="anchor" href="#Improving-the-RNN" aria-hidden="true"><span class="octicon octicon-link"></span></a>Improving the RNN<a class="anchor-link" href="#Improving-the-RNN"> </a>
+</h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Looking at the code for our RNN, one thing that seems problematic is that we are initialising our hidden state to zero for every new input sequence. Why is that a problem? We made our sample sequences short so they would fit easily into batches. But if we order those samples correctly, those sample sequences will be read in order by the model, exposing the model to long stretches of the original sequence.</p>
 <p>Another thing we can look at is havin more signal: why only predict the fourth word when we could use the intermediate predictions to also predict the second and third words?</p>
@@ -1018,9 +1113,12 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Maintaining-the-state-of-an-RNN">Maintaining the state of an RNN<a class="anchor-link" href="#Maintaining-the-state-of-an-RNN"> </a></h3>
+<h3 id="Maintaining-the-state-of-an-RNN">
+<a class="anchor" href="#Maintaining-the-state-of-an-RNN" aria-hidden="true"><span class="octicon octicon-link"></span></a>Maintaining the state of an RNN<a class="anchor-link" href="#Maintaining-the-state-of-an-RNN"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -1068,14 +1166,16 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>If you think about it, this model will have the same activations whatever the sequence length we pick, because the hidden state will remember the last activation from the previous batch. The only thing that will be different are the gradients computed at each step: they will only be calculated on sequence length tokens in the past, instead of the whole stream. That is why this sequence length is often called <em>bptt</em> for back-propagation through time.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>jargon: Back propagation through time (BPTT): Treating a neural net with effectively one layer per time step (usually refactored using a loop) as one big model, and calculating gradients on it in the usual way. To avoid running out of memory and time, we usually use <em>truncated</em> BPTT, which "detaches" the history of computation steps in the hidden state every few time steps.</li>
@@ -1127,7 +1227,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The first batch will be composed of the samples:</p>
 
@@ -1166,7 +1267,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Then we just pass <code>drop_last=True</code> when building our <code>DataLoaders</code> to drop the last batch that has not a shape of <code>bs</code>, we also pass <code>shuffle=False</code>  to make sure the texts are read in order.</p>
 
@@ -1317,16 +1419,20 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This is already better! The next step is to use more targets and compare them to the intermediate predictions.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Creating-more-signal">Creating more signal<a class="anchor-link" href="#Creating-more-signal"> </a></h3>
+<h3 id="Creating-more-signal">
+<a class="anchor" href="#Creating-more-signal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating more signal<a class="anchor-link" href="#Creating-more-signal"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -1337,11 +1443,12 @@ window.onload = wrap_img;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00024.png" alt="RNN predicting after every token" style="max-width: 400px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00024.png" alt="RNN predicting after every token" style="max-width: 400px">
     
     
       <figcaption>RNN predicting after every token</figcaption>
@@ -1352,7 +1459,8 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This is easy enough to add. We need to first change our data so that the dependent variable has each of the three next words after each of our three input words. Instead of 3, we use an attribute, <code>sl</code> (for sequence length) and make it a bit bigger:</p>
 
@@ -1382,7 +1490,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Looking at the first element of <code>seqs</code>, we can see that it contains two lists of the same size. The second list is the same as the first, but offset by one element:</p>
 
@@ -1411,8 +1520,8 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[(#16) [&#39;one&#39;,&#39;.&#39;,&#39;two&#39;,&#39;.&#39;,&#39;three&#39;,&#39;.&#39;,&#39;four&#39;,&#39;.&#39;,&#39;five&#39;,&#39;.&#39;...],
- (#16) [&#39;.&#39;,&#39;two&#39;,&#39;.&#39;,&#39;three&#39;,&#39;.&#39;,&#39;four&#39;,&#39;.&#39;,&#39;five&#39;,&#39;.&#39;,&#39;six&#39;...]]</pre>
+<pre>[(#16) ['one','.','two','.','three','.','four','.','five','.'...],
+ (#16) ['.','two','.','three','.','four','.','five','.','six'...]]</pre>
 </div>
 
 </div>
@@ -1423,7 +1532,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now we need to modify our model so that it outputs a prediction after every word, rather than just at the end of a three word sequence:</p>
 
@@ -1463,7 +1573,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This model will return outputs of shape <code>bs x sl x vocab_sz</code> (since we stacked on <code>dim=1</code>). Our targets are of shape <code>bs x sl</code>, so we need to flatten those before using them in <code>F.cross_entropy</code>:</p>
 
@@ -1488,7 +1599,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can now use this loss function to train the model:</p>
 
@@ -1646,7 +1758,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We need to train for longer, since the task has changed a bit and is more complicated now. But we end up with a good result... At least, sometimes. If you run it a few times, you'll see that you can get quite different results on different runs. That's because effectively we have a very deep network here, which can result in very large or very small gradients. We'll see in the next part of to deal with this.</p>
 <p>Now, the obvious way to get a better model is to go deeper: we only have one linear layer between the hidden state and the output activations in our basic RNN, so maybe we would get better results with more.</p>
@@ -1654,9 +1767,12 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Multilayer-RNNs">Multilayer RNNs<a class="anchor-link" href="#Multilayer-RNNs"> </a></h2>
+<h2 id="Multilayer-RNNs">
+<a class="anchor" href="#Multilayer-RNNs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multilayer RNNs<a class="anchor-link" href="#Multilayer-RNNs"> </a>
+</h2>
 </div>
 </div>
 </div>
@@ -1667,11 +1783,12 @@ window.onload = wrap_img;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00025.png" alt="2-layer RNN" style="max-width: 550px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00025.png" alt="2-layer RNN" style="max-width: 550px">
     
     
       <figcaption>2-layer RNN</figcaption>
@@ -1689,11 +1806,12 @@ window.onload = wrap_img;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00026.png" alt="2-layer unrolled RNN" style="max-width: 500px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/att_00026.png" alt="2-layer unrolled RNN" style="max-width: 500px">
     
     
       <figcaption>2-layer unrolled RNN</figcaption>
@@ -1704,20 +1822,25 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's see how to implement this in practice.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-model">The model<a class="anchor-link" href="#The-model"> </a></h2>
+<h2 id="The-model">
+<a class="anchor" href="#The-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>The model<a class="anchor-link" href="#The-model"> </a>
+</h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's save some time by using PyTorch's RNN class, which implements exactly what we have created above, but also gives us the option to stack multiple RNNs, as we have discussed:</p>
 
@@ -1905,16 +2028,20 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now that's disappointing... we are doing more poorly than the single-layer RNN from the end of last section. The reason is that we have a deeper model, leading to exploding or disappearing activations.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exploding-or-disappearing-activations">Exploding or disappearing activations<a class="anchor-link" href="#Exploding-or-disappearing-activations"> </a></h3>
+<h3 id="Exploding-or-disappearing-activations">
+<a class="anchor" href="#Exploding-or-disappearing-activations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploding or disappearing activations<a class="anchor-link" href="#Exploding-or-disappearing-activations"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -1928,11 +2055,12 @@ window.onload = wrap_img;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/fltscale.svg" alt="Precision of floating point numbers" style="max-width: 1000px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/fltscale.svg" alt="Precision of floating point numbers" style="max-width: 1000px">
     
     
       <figcaption>Precision of floating point numbers</figcaption>
@@ -1952,13 +2080,17 @@ window.onload = wrap_img;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="LSTM">LSTM<a class="anchor-link" href="#LSTM"> </a></h2>
+<h2 id="LSTM">
+<a class="anchor" href="#LSTM" aria-hidden="true"><span class="octicon octicon-link"></span></a>LSTM<a class="anchor-link" href="#LSTM"> </a>
+</h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>LSTM (for long short-term memory) is an architecture that was introduced back in 1997 by Jurgen Schmidhuber and Sepp Hochreiter. In this architecture, there are not one but two hidden states. In our base RNN, the hidden state is the output of the RNN at the previous time step. That hidden state is then responsible for doing two things at a time:</p>
 <ul>
@@ -1971,9 +2103,12 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Building-an-LSTM-from-scratch">Building an LSTM from scratch<a class="anchor-link" href="#Building-an-LSTM-from-scratch"> </a></h3>
+<h3 id="Building-an-LSTM-from-scratch">
+<a class="anchor" href="#Building-an-LSTM-from-scratch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building an LSTM from scratch<a class="anchor-link" href="#Building-an-LSTM-from-scratch"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -1982,7 +2117,7 @@ window.onload = wrap_img;
 <p>In order to build an LSTM, we first have to understand its architecture. &lt;<lstm>&gt; shows us its inner structure.&lt;/p&gt;
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/LSTM.png" alt="A graph showing the inner architecture of an LSTM" style="max-width: 700px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/LSTM.png" alt="A graph showing the inner architecture of an LSTM" style="max-width: 700px">
     
     
       <figcaption>Architecture of an LSTM</figcaption>
@@ -1993,7 +2128,8 @@ window.onload = wrap_img;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In this picture, our input $x_{t}$ enters on the bottom with the previous hidden state ($h_{t-1}$) and cell state ($c_{t-1}$). The four orange boxes represent four layers with the activation being either sigmoid (for $\sigma$) or tanh. tanh is just a sigmoid rescaled to the range -1 to 1. Its mathematical expression can be written like this:</p>
 $$\tanh(x) = \frac{e^{x} + e^{-x}}{e^{x}-e^{-x}} = 2 \sigma(2x) - 1$$<p>where $\sigma$ is the sigmoid function. The green boxes are elementwise operations. What goes out is the new hidden state ($h_{t}$) and new cell state ($c_{t}$) on the left, ready for our next input. The new hidden state is also use as output, which is why the arrow splits to go up.</p>
@@ -2041,7 +2177,8 @@ $$\tanh(x) = \frac{e^{x} + e^{-x}}{e^{x}-e^{-x}} = 2 \sigma(2x) - 1$$<p>where $\
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In practice, we can then refactor the code. Also, in terms of performance, it's better to do one big matrix multiplication than four smaller ones (that's because we only launch the special fast kernel on GPU once, and it gives the GPU more work to do in parallel). The stacking takes a bit of time (since we have to move one of the tensors around on the GPU to have it all in a contiguous array), so we use two separate layers for the input and the hidden state. The optimized and refactored code then looks like that:</p>
 
@@ -2079,7 +2216,8 @@ $$\tanh(x) = \frac{e^{x} + e^{-x}}{e^{x}-e^{-x}} = 2 \sigma(2x) - 1$$<p>where $\
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here we use the PyTorch <code>chunk</code> method to split our tensor into 4 pieces, e.g.:</p>
 
@@ -2152,20 +2290,25 @@ $$\tanh(x) = \frac{e^{x} + e^{-x}}{e^{x}-e^{-x}} = 2 \sigma(2x) - 1$$<p>where $\
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's now use this architecture to train a language model!</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Training-a-language-model-using-LSTMs">Training a language model using LSTMs<a class="anchor-link" href="#Training-a-language-model-using-LSTMs"> </a></h3>
+<h3 id="Training-a-language-model-using-LSTMs">
+<a class="anchor" href="#Training-a-language-model-using-LSTMs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training a language model using LSTMs<a class="anchor-link" href="#Training-a-language-model-using-LSTMs"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here is the same network as <code>LMModel5</code>, using a two-layer LSTM. We can train it at a higher learning rate, for a shorter time, and get better accuracy:</p>
 
@@ -2354,20 +2497,25 @@ $$\tanh(x) = \frac{e^{x} + e^{-x}}{e^{x}-e^{-x}} = 2 \sigma(2x) - 1$$<p>where $\
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now that's better than a multilayer RNN! We can still see there is a bit of overfitting, which is a sign that a bit of regularization might help.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Regularizing-an-LSTM">Regularizing an LSTM<a class="anchor-link" href="#Regularizing-an-LSTM"> </a></h2>
+<h2 id="Regularizing-an-LSTM">
+<a class="anchor" href="#Regularizing-an-LSTM" aria-hidden="true"><span class="octicon octicon-link"></span></a>Regularizing an LSTM<a class="anchor-link" href="#Regularizing-an-LSTM"> </a>
+</h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Recurrent neural networks, in general, are hard to train, because of the problems of vanishing activations and gradients we saw before. Using LSTMs (or GRUs) cell make training easier than vanilla RNNs, but there are still very prone to overfitting. Data augmentation, while it exists for text data, is less often used because in most cases, it requires another model to generate random augmentation (by translating in another language and back to the language used for instance). Overall, data augmentation for text data is currently not a well explored space.</p>
 <p>However, there are other regularization techniques we can use instead to reduce overfitting, which were thoroughly studied for use with LSTMs in the paper <a href="https://arxiv.org/abs/1708.02182">Regularizing and Optimizing LSTM Language Models</a>. This paper showed how effective use of <em>dropout</em>, <em>activation regularization</em>, and <em>temporal activation regularization</em> could allow an LSTM to beat state of the art results that previously required much more complicated models. They called an LSTM using these techniques an <em>AWD LSTM</em>. We'll look at each of these techniques in turn.</p>
@@ -2375,9 +2523,12 @@ $$\tanh(x) = \frac{e^{x} + e^{-x}}{e^{x}-e^{-x}} = 2 \sigma(2x) - 1$$<p>where $\
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Dropout">Dropout<a class="anchor-link" href="#Dropout"> </a></h3>
+<h3 id="Dropout">
+<a class="anchor" href="#Dropout" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dropout<a class="anchor-link" href="#Dropout"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -2386,7 +2537,7 @@ $$\tanh(x) = \frac{e^{x} + e^{-x}}{e^{x}-e^{-x}} = 2 \sigma(2x) - 1$$<p>where $\
 <p>Dropout is a regularization technique that was introduce by Geoffrey Hinton et al. in <a href="https://arxiv.org/abs/1207.0580">Improving neural networks by preventing co-adaptation of feature detectors</a>. The basic idea is to randomly change some activations to zero at training time. This makes sure all neurons actively work toward the output as seen in &lt;<img_dropout>&gt; which is a screenshot from the original paper.&lt;/p&gt;
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/Dropout1.png" alt="A figure from the article showing how neurons go off with dropout" style="max-width: 800px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/Dropout1.png" alt="A figure from the article showing how neurons go off with dropout" style="max-width: 800px">
     
     
       <figcaption>A screenshot from the dropout paper</figcaption>
@@ -2394,7 +2545,8 @@ $$\tanh(x) = \frac{e^{x} + e^{-x}}{e^{x}-e^{-x}} = 2 \sigma(2x) - 1$$<p>where $\
 </figure>
 </p>
 <p>Hinton used a nice metaphor when he explained, in an interview, the inspiration for dropout:</p>
-<blockquote><p>: "I went to my bank. The tellers kept changing and I asked one of them why. He said he didn’t know but they got moved around a lot. I figured it must be because it would require cooperation between employees to successfully defraud the bank. This made me realize that randomly removing a different subset of neurons on each example would prevent conspiracies and thus reduce overfitting"
+<blockquote>
+<p>: "I went to my bank. The tellers kept changing and I asked one of them why. He said he didn’t know but they got moved around a lot. I figured it must be because it would require cooperation between employees to successfully defraud the bank. This made me realize that randomly removing a different subset of neurons on each example would prevent conspiracies and thus reduce overfitting"
 In the same interview, he also explained that neuroscience provided additional inspiration:
 : "We don't really know why neurons spike. One theory is that they want to be noisy so as to regularize, because we have many more parameters than we have data points. The idea of dropout is that if you have noisy activations, you can afford to use a much bigger model."</p>
 </blockquote>
@@ -2402,7 +2554,8 @@ In the same interview, he also explained that neuroscience provided additional i
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>TK add takeaway form those citations before moving on.</p>
 
@@ -2414,7 +2567,7 @@ In the same interview, he also explained that neuroscience provided additional i
 <p>We can see there that if we just zero those activations without doing anything else, our model will have problems to train: if we go from the sum of 5 activations (that are all positive numbers since we apply a ReLU) to just 2, this won't have the same scale. Therefore if we dropout with a probability <code>p</code>, we rescale all activation by dividing them by <code>1-p</code> (on average <code>p</code> will be zeroed, so it leaves <code>1-p</code>), as shown in &lt;<img_dropout1>&gt; which is a diagram from the original paper.&lt;/p&gt;
 <p><figure>
   
-    <img class="docimage" src="/fastbook/images/copied_from_nb/images/Dropout.png" alt="A figure from the article introducing dropout showing how a neuron is on/off" style="max-width: 600px" />
+    <img class="docimage" src="/fastbook/images/copied_from_nb/images/Dropout.png" alt="A figure from the article introducing dropout showing how a neuron is on/off" style="max-width: 600px">
     
     
 </figure>
@@ -2449,29 +2602,35 @@ In the same interview, he also explained that neuroscience provided additional i
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The <code>bernoulli_</code> method is creating a tensor with random zeros (with probability p) and ones (with probability 1-p), which is then multiplied with our input before dividing by <code>1-p</code>. Note the use of the <code>training</code> attribute, which is available in any PyTorch <code>nn.Module</code>, and tells us if we are doing training or inference.
+</p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
-    <strong>Note: </strong>In previous chapters of the book we&#8217;d be adding a code example for <code>bernoulli_</code> here, so you can see exactly how it works. But now that you know enough to do this yourself, we&#8217;re going to be doing fewer and fewer examples for you, and instead expecting you to do your own experiments to see how things work. In this case, you&#8217;ll see in the end-of-chapter questionnaire that we&#8217;re asking you to experiment with <code>bernoulli_</code>--but don&#8217;t wait for us to ask you to experiment to develop your understanding of the code we&#8217;re studying, go ahead and do it anyway!
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
+    <strong>Note: </strong>In previous chapters of the book we’d be adding a code example for <code>bernoulli_</code> here, so you can see exactly how it works. But now that you know enough to do this yourself, we’re going to be doing fewer and fewer examples for you, and instead expecting you to do your own experiments to see how things work. In this case, you’ll see in the end-of-chapter questionnaire that we’re asking you to experiment with <code>bernoulli_</code>--but don’t wait for us to ask you to experiment to develop your understanding of the code we’re studying, go ahead and do it anyway!
 </div>
 Using dropout before passing the output of our LSTM to the final layer will help reduce overfitting. Dropout is also used in many other models, including the default CNN head used in <code>fastai.vision</code>, and is also available in <code>fastai.tabular</code> by passing the <code>ps</code> parameter (where each "p" is passed to each added <code>Dropout</code> layer), as we'll see in &lt;<chapter_arch_details>&gt;.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Dropout has a different behavior in training and validation mode, which we achieved using the <code>training</code> attribute in <code>Dropout</code> above. Calling the <code>train()</code> method on a <code>Module</code> sets <code>training</code> to <code>True</code> (both for the module you call the method on, and for every module it recursively contains), and <code>eval()</code> sets it to <code>False</code>. This is done automatically when calling the methods of <code>Learner</code>, but if you are not using that class, remember to switch from one to the other as needed.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="AR-and-TAR-regularization">AR and TAR regularization<a class="anchor-link" href="#AR-and-TAR-regularization"> </a></h3>
+<h3 id="AR-and-TAR-regularization">
+<a class="anchor" href="#AR-and-TAR-regularization" aria-hidden="true"><span class="octicon octicon-link"></span></a>AR and TAR regularization<a class="anchor-link" href="#AR-and-TAR-regularization"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>AR (for <em>activation regularization</em>) and TAR (for <em>temporal activation regularization</em>) are two regularization methods very similar to weight decay. When applying weight decay, we add a small penalty to the loss that aims at making the weights as small as possible. For the activation regularization, it's the final activations produced by the LSTM that we will try to make as small as possible, instead of the weights.</p>
 <p>To regularize the final activations, we have to store those somewhere, then add the means of the squares of them to the loss (along with a multiplier <code>alpha</code>, which is just like <code>wd</code> for weight decay):</p>
@@ -2481,7 +2640,8 @@ Using dropout before passing the output of our LSTM to the final layer will help
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Temporal activation regularization is linked to the fact we are predicting tokens in a sentence. That means it's likely that the outputs of our LSTMs should somewhat make sense when we read them in order. TAR is there to encourage that behavior by adding a penalty to the loss to make the difference between two consecutive activations as small as possible: our activations tensor has a shape <code>bs x sl x n_hid</code>, and we read consecutive activation on the sequence length axis (so the dimension in the middle). With this, TAR can be expressed as:</p>
 <div class="highlight"><pre><span></span><span class="n">loss</span> <span class="o">+=</span> <span class="n">beta</span> <span class="o">*</span> <span class="p">(</span><span class="n">activations</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span> <span class="o">-</span> <span class="n">activations</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -2491,13 +2651,17 @@ Using dropout before passing the output of our LSTM to the final layer will help
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Training-a-weight-tied-regularized-LSTM">Training a weight-tied regularized LSTM<a class="anchor-link" href="#Training-a-weight-tied-regularized-LSTM"> </a></h3>
+<h3 id="Training-a-weight-tied-regularized-LSTM">
+<a class="anchor" href="#Training-a-weight-tied-regularized-LSTM" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training a weight-tied regularized LSTM<a class="anchor-link" href="#Training-a-weight-tied-regularized-LSTM"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can combine dropout (applied before we go in our output layer) with the AR and TAR regularization to train our previous LSTM. We just need to return three things instead of one: the normal output of our LSTM, the dropped-out activations and the activations from our LSTMs. Those last two will be picked up by the callback <code>RNNRegularization</code> for the contributions it has to make to the loss.</p>
 <p>Another useful trick we can add from the AWD LSTM paper is <em>weight tying</em>. In a language model, the input embeddings represent a mapping from English words to activations, and the output hidden layer represents a mapping from activations to English words. We might expect, intuitively, that these mappings could be the same. We can represent this in PyTorch by assigning the same weight matrix to each of these layers:</p>
@@ -2543,7 +2707,8 @@ Using dropout before passing the output of our LSTM to the final layer will help
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can create a regularized <code>Learner</code> using the <code>RNNRegularizer</code> callback:</p>
 
@@ -2569,7 +2734,8 @@ Using dropout before passing the output of our LSTM to the final layer will help
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A <code>TextLearner</code> automatically adds those two callbacks for us (with default for <code>alpha</code> and <code>beta</code> as above) so we can simplify the line above to:</p>
 
@@ -2594,7 +2760,8 @@ Using dropout before passing the output of our LSTM to the final layer will help
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can the train the model, and add additional regularization by increasing the weight decay to <code>0.1</code>:</p>
 
@@ -2750,16 +2917,20 @@ Using dropout before passing the output of our LSTM to the final layer will help
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now this is far better than our previous model!</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion"> </a></h2>
+<h2 id="Conclusion">
+<a class="anchor" href="#Conclusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusion<a class="anchor-link" href="#Conclusion"> </a>
+</h2>
 </div>
 </div>
 </div>
@@ -2778,9 +2949,12 @@ Using dropout before passing the output of our LSTM to the final layer will help
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Questionnaire">Questionnaire<a class="anchor-link" href="#Questionnaire"> </a></h2>
+<h2 id="Questionnaire">
+<a class="anchor" href="#Questionnaire" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questionnaire<a class="anchor-link" href="#Questionnaire"> </a>
+</h2>
 </div>
 </div>
 </div>
@@ -2813,14 +2987,16 @@ Using dropout before passing the output of our LSTM to the final layer will help
 <li>Why does it help to have two hidden states in the LSTM architecture? What is the purpose of each one?</li>
 <li>What are these two states called in an LSTM?</li>
 <li>What is tanh, and how is it related to sigmoid?</li>
-<li>What is the purpose of this code in <code>LSTMCell</code>?: <code>h = torch.stack([h, input], dim=1)</code></li>
+<li>What is the purpose of this code in <code>LSTMCell</code>?: <code>h = torch.stack([h, input], dim=1)</code>
+</li>
 <li>What does <code>chunk</code> to in PyTorch?</li>
 <li>Study the refactored version of <code>LSTMCell</code> carefully to ensure you understand how and why it does the same thing as the non-refactored version.</li>
 <li>Why can we use a higher learning rate for <code>LMModel6</code>?</li>
 <li>What are the three regularisation techniques used in an AWD-LSTM model?</li>
 <li>What is dropout?</li>
 <li>Why do we scale the weights with dropout? Is this applied during training, inference, or both?</li>
-<li>What is the purpose of this line from <code>Dropout</code>?: <code>if not self.training: return x</code></li>
+<li>What is the purpose of this line from <code>Dropout</code>?: <code>if not self.training: return x</code>
+</li>
 <li>Experiment with <code>bernoulli_</code> to understand how it works.</li>
 <li>How do you set your model in training mode in PyTorch? In evaluation mode?</li>
 <li>Write the equation for activation regularization (in maths or code, as you prefer). How is it different to weight decay?</li>
@@ -2831,9 +3007,12 @@ Using dropout before passing the output of our LSTM to the final layer will help
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Further-research">Further research<a class="anchor-link" href="#Further-research"> </a></h3>
+<h3 id="Further-research">
+<a class="anchor" href="#Further-research" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further research<a class="anchor-link" href="#Further-research"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -2852,10 +3031,63 @@ Using dropout before passing the output of our LSTM to the final layer will help
 &lt;/div&gt;
  
 
-</lstm></li></ol></div></div></div></chapter_nlp></li></ol></div></div></div></chapter_nlp></p></div></div></div></chapter_arch_details></p></div></div></div></img_dropout1></p></div></div></div></img_dropout></p></div></div></div></lstm></p></div></div></div></chapter_foundations></chapter_resnet></chapter_convolutions></p></div></div></div></float_prec></p></div></div></div></lm_rep></unrolled_stack_rep></p></div></div></div></stacked_rnn_rep></p></div></div></div></stateful_rep></p></div></div></div></chapter_accel_sgd></p></div></div></div></chapter_nlp></p></chapter_nlp></p></div></div></div></lm_rep></p></div></div></div></lm_rep></basic_rnn></p></div></div></div></lm_rep></p></div></div></div></img_shapes></p></div></div></div></img_simple_nn></p></div></div></div></chapter_nlp></p></div></div></div></div>
+</lstm>
+</li>
+</ol>
+</div>
+</div></div></chapter_nlp>
+</li>
+</ol>
+</div>
+</div></div></chapter_nlp></p>
+</div>
+</div></div></chapter_arch_details>
+</div>
+</div></div></img_dropout1></p>
+</div>
+</div></div></img_dropout></p>
+</div>
+</div></div></lstm></p>
+</div>
+</div></div></chapter_foundations></chapter_resnet></chapter_convolutions></p>
+</div>
+</div></div></float_prec></p>
+</div>
+</div></div></lm_rep></unrolled_stack_rep></p>
+</div>
+</div></div></stacked_rnn_rep></p>
+</div>
+</div></div></stateful_rep></p>
+</div>
+</div></div></chapter_accel_sgd></p>
+</div>
+</div></div></chapter_nlp></p></chapter_nlp></p>
+</div>
+</div></div></lm_rep></p>
+</div>
+</div></div></lm_rep></basic_rnn></p>
+</div>
+</div></div></lm_rep></p>
+</div>
+</div></div></img_shapes></p>
+</div>
+</div></div></img_simple_nn></p>
+</div>
+</div></div></chapter_nlp></p>
+</div>
+</div></div>
+</div>
 
 
-  </div><a class="u-url" href="/fastbook/2020/03/19/_nlp_dive.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="maxlein/fastbook"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/fastbook/2020/03/19/_nlp_dive.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
