@@ -94,7 +94,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      22 min read
+      23 min read
     
 </span></p>
 
@@ -464,7 +464,7 @@ window.onload = wrap_img;
 <p>For each of <code>tok</code> or <code>num</code> above, we created an object, called the setup method (which trains the tokenizer if needed for <code>tok</code> and creates the vocab for <code>num</code>), applied it to our raw texts (by calling the object as a function), and then finally decoded it back to an understandable representation. These steps are needed for most data preprocessing tasks, so fastai provides a class that encapsulates them. This is the <code>Transform</code> class. Both <code>Tokenize</code> and <code>Numericalize</code> are <code>Transform</code>s.</p>
 <p>In general, a <code>Transform</code> is an object that behaves like a function, has an optional <em>setup</em> that will initialize some inner state (like the vocab inside <code>num</code> for instance), and has an optional <em>decode</em> that will reverse the function (this reversal may not be perfect, as we saw above for <code>tok</code>).</p>
 <p>A good example of <code>decode</code> is found in the <code>Normalize</code> transform that we saw in &lt;<chapter_sizing_and_tta>&gt;: to be able to plot the images its <code>decode</code> method undoes the normalization (i.e. it multiplies by the std and adds back the mean). On the other hand, data augmentation transforms do not have a <code>decode</code> method, since we want to show the effects on images, to make sure the data augmentation is working as we want.&lt;/p&gt;
-<p>The second special behavior of <code>Transform</code>s is that they always get applied over tuples: in general, our data is always a tuple <code>(input,target)</code> (sometimes with more than one input or more than one target). When applying a transform on an item like this, such as <code>Resize</code>, we don't want to resize the tuple, but resize the input (if applicable) and the target (if applicable). It's the same for the batch transforms that do data augmentation: when the input is an image and the target is a segmentation mask, the transform needs to be applied (the same way) to the input and the target.</p>
+<p>A special behavior of <code>Transform</code>s is that they always get applied over tuples: in general, our data is always a tuple <code>(input,target)</code> (sometimes with more than one input or more than one target). When applying a transform on an item like this, such as <code>Resize</code>, we don't want to resize the tuple, but resize the input (if applicable) and the target (if applicable). It's the same for the batch transforms that do data augmentation: when the input is an image and the target is a segmentation mask, the transform needs to be applied (the same way) to the input and the target.</p>
 <p>We can see this behavior if we pass a tuple of texts to <code>tok</code>:</p>
 
 &lt;/div&gt;
@@ -492,8 +492,8 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>((#374) [&#39;xxbos&#39;,&#39;xxmaj&#39;,&#39;well&#39;,&#39;,&#39;,&#39;&#34;&#39;,&#39;cube&#39;,&#39;&#34;&#39;,&#39;(&#39;,&#39;1997&#39;,&#39;)&#39;...],
- (#207) [&#39;xxbos&#39;,&#39;xxmaj&#39;,&#39;conrad&#39;,&#39;xxmaj&#39;,&#39;hall&#39;,&#39;went&#39;,&#39;out&#39;,&#39;with&#39;,&#39;a&#39;,&#39;bang&#39;...])</pre>
+<pre>((#228) [&#39;xxbos&#39;,&#39;xxmaj&#39;,&#39;this&#39;,&#39;movie&#39;,&#39;,&#39;,&#39;which&#39;,&#39;i&#39;,&#39;just&#39;,&#39;discovered&#39;,&#39;at&#39;...],
+ (#238) [&#39;xxbos&#39;,&#39;i&#39;,&#39;stopped&#39;,&#39;watching&#39;,&#39;this&#39;,&#39;film&#39;,&#39;half&#39;,&#39;way&#39;,&#39;through&#39;,&#39;.&#39;...])</pre>
 </div>
 
 </div>
@@ -512,7 +512,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If you want to write a custom transform to apply to your data, the easiest way is to write a function:</p>
+<p>If you want to write a custom transform to apply to your data, the easiest way is to write a function. As you can see in this example, a <code>Transform</code> will only be applied to a matching type, if a type is provided (otherwise it will always be applied). In the following code, the <code>:int</code> in the function signature means that the <code>f</code> only gets applied to ints. That's why <code>tfm(2.0)</code> returns <code>2.0</code>, but <code>tfm(2)</code> returns <code>3</code> here:</p>
 
 </div>
 </div>
@@ -524,9 +524,9 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="nb">int</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
 <span class="n">tfm</span> <span class="o">=</span> <span class="n">Transform</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="n">tfm</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">tfm</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="n">tfm</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -541,7 +541,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>3</pre>
+<pre>(3, 2.0)</pre>
 </div>
 
 </div>
@@ -554,7 +554,50 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>tfm</code> will automatically convert <code>f</code> to a <code>Transform</code> with no setup and no decode method. If you need either of those, you will need to subclass <code>Transform</code>. When writing this subclass, you need to implement the actual function in <code>encodes</code>, then (optionally), the setup behavior in <code>setups</code> and the decoding behavior in <code>decodes</code>:</p>
+<p>Here <code>f</code> is converted to a <code>Transform</code> with no <code>setup</code> and no <code>decode</code> method.</p>
+<p>Python has a special syntax for passing a function (like <code>f</code>) to another function (or something that behaves like a function, known as a <code>callable</code> in Python), which is a <em>decorator</em>. A decorator is used by prepending a callable with <code>@</code>, and placing it before a function definition (there's lots of good online tutorials for Python decorators, so take a look if this is a new concept for you). The following is identical to the previous code:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@Transform</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="nb">int</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="n">f</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(3, 2.0)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If you need either <code>setup</code> or <code>decode</code>, you will need to subclass <code>Transform</code>. When writing this subclass, you need to implement the actual function in <code>encodes</code>, then (optionally), the setup behavior in <code>setups</code> and the decoding behavior in <code>decodes</code>:</p>
 
 </div>
 </div>
@@ -1320,7 +1363,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>...except that now, you know how to customize every single piece of it!</p>
-<p>Let's practice what we just learned on this mid-level API for data preprocessing on a computer vision example now, with a Siamese Model input pipeline.</p>
+<p>Let's practice what we just learned on this mid-level API for data preprocessing on a computer vision example now, with a <em>Siamese Model</em> input pipeline.</p>
 
 </div>
 </div>
@@ -1333,18 +1376,12 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A Siamese model takes two images and has to determine if they are of the same classe or not. For this example, we will use the pets dataset again, and prepare the data for a model that will have to predict if two images of pets are of the same breed or not. We will explain here how to prepare the data for such a model, then we will train that model in &lt;<chapter_arch_details>&gt;.&lt;/p&gt;
+<p>A <em>Siamese model</em> takes two images and has to determine if they are of the same class or not. For this example, we will use the pets dataset again, and prepare the data for a model that will have to predict if two images of pets are of the same breed or not. We will explain here how to prepare the data for such a model, then we will train that model in &lt;<chapter_arch_details>&gt;.&lt;/p&gt;
+<p>Firs things first, let's get the images in our dataset.</p>
 
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Firs things first, let's get all the images in our dataset.</p>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1367,7 +1404,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>If we didn't care about showing our objects at all, we could directly create one transform to completely preprocess that list of files. We will want to look at those images though, so we need to create a custom type. When you call the <code>show</code> method on a <code>TfmdLists</code> or a <code>Datasets</code> object, it will decode items until it reaches a type that contains a <code>show</code> method and use it to show the object. That <code>show</code> method gets passed a <code>ctx</code>, which could be a matplotlib axes for images, or the row of a dataframe for texts.</p>
-<p>Here we create a <code>SiameseImage</code> object that subclasses tuples and is inteneded to be contain three things: two images and a boolean to know if they are the same or not. We implement the <code>show</code> method that concatenates the two images with a black line in the middle. You can skip the part that is in the if test (which is to show the <code>SiameseImage</code> when the images are pillow images and not tensors), the important part is in the last three lines.</p>
+<p>Here we create a <code>SiameseImage</code> object that subclasses <code>Tuple</code> and is intended to contain three things: two images, and a boolean that's <code>True</code> if they are the breed. We also implement the special <code>show</code> method, such that it concatenates the two images, with a black line in the middle. Don't worry too much about the part that is in the <code>if</code> test (which is to show the <code>SiameseImage</code> when the images are Pillow images, and not tensors), the important part is in the last three lines.</p>
 
 </div>
 </div>

@@ -663,7 +663,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now that we have a dataset and a collation function, we're ready to create <code>DataLoader</code>. We'll add two more things here: optional <code>shuffle</code> for the training set, and <code>ProcessPoolExecutor</code> to do our preprocessing in parallel. A parallel data loader is very important, because opening and decoding a jpeg image is a slow process. One CPU is not enough to decode images fast enough to keep a modern GPU busy.</p>
+<p>Now that we have a dataset and a collation function, we're ready to create <code>DataLoader</code>. We'll add two more things here: optional <code>shuffle</code> for the training set, and <code>ProcessPoolExecutor</code> to do our preprocessing in parallel. A parallel data loader is very important, because opening and decoding a jpeg image is a slow process. One CPU core is not enough to decode images fast enough to keep a modern GPU busy.</p>
 
 </div>
 </div>
